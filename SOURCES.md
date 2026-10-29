@@ -31,3 +31,27 @@ The supplied Stile Y10 Prep collection contained 270 PDF files (265 distinct fil
 - CDC, Principles of Vaccination (immune memory): https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-1-principles-of-vaccination.html
 
 No source lesson documents are redistributed. Full Victorian Curriculum coverage, richer question banks, experimental datasets, generation/energy comparisons, speciation/evidence and teacher assessment remain future development.
+
+## Exam practice added 29 October 2026
+
+The exam workspace contains 66 practice items across 11 topics: 44 automatically marked multiple-choice/calculation items and 22 written responses with point-based self-assessment. It covers the eight additional explorers plus genetics/cell division, reaction rates and heat transfer. Every topic contains three core auto questions, one extension auto question, one core written response and one extension written response.
+
+The following user-supplied files were text-extracted and relevant sections reviewed:
+
+- Evolution_Classification Questions.docx (an A-level classification collection, used selectively for general evidence skills rather than importing its level wholesale)
+- 2022 NEAP Yr 10 Sci Questions.docx
+- 2020 Natural Selection Year 10 Science Quiz .docx
+- Genetics exam DRAFT 2025.docx
+- Draft 3 NS & Evolution Qs 10 Science exam 2025.docx
+- 2025 SEM 2 Science Core.docx
+- 2025 SEM 2 Science EXT Final.docx
+- 2024 Yr10 Science Exam SEM 2 CORE.pdf (20 pages)
+- 2024 Yr10 Science Exam SEM 2 EXT.pdf (8 pages)
+
+Selected 2024 core pages were also rendered for diagram/context inspection. Extraction is not a claim that every original diagram or every page was manually audited. The bank uses original wording, values, diagrams and datasets, with skill/context adaptations from these papers. Topic-level provenance is visible under “Question sources and scope”. Original papers and answer sheets are not included in the repository or site.
+
+Key connections: evolution questions draw on the natural-selection sequence, phylogenetic-tree reasoning, antibiotic resistance, bottlenecks and allopatric speciation. Genetics includes chromosome counts, monohybrid probabilities, meiosis and conditional X-linked inheritance. Rates/heat items use collision theory, experimental controls, graph interpretation and thermal-transfer explanations. NEAP material informed motion, atom/periodic, cosmic-evidence and climate assessment skills. Electricity and immunology questions are original supplementary practice aligned to the earlier resources; no corresponding items were identified in these supplied papers.
+
+The marking guides are newly authored practice guides, not official examiner keys. Ambiguous/inaccurate formulations in source drafts were not retained: mutation supplies new alleles but not every allele-frequency change requires a fresh mutation; random bottlenecks are distinguished from selection; geographical isolation alone does not immediately establish a new species; greenhouse explanations distinguish reflected sunlight from emitted infrared; chromosome number is distinct from DNA amount. Difficulty labels describe practice level, not school grade boundaries.
+
+Progress is local to the browser and origin. First-check accuracy, current-run results, best completed runs, drafts and written self-assessments are distinct. Written responses are not automatically graded. Retrying auto questions preserves first-check/best results and written drafts; editing a draft invalidates its prior self-assessment until saved again. A separate, confirmed reset clears exam progress without changing the original genetics checks. Progress export produces JSON; no cross-device syncing or import interface is currently provided.
