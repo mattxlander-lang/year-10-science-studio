@@ -34,7 +34,7 @@ No source lesson documents are redistributed. Full Victorian Curriculum coverage
 
 ## Exam practice added 29 October 2026
 
-The exam workspace contains 66 practice items across 11 topics: 44 automatically marked multiple-choice/calculation items and 22 written responses with point-based self-assessment. It covers the eight additional explorers plus genetics/cell division, reaction rates and heat transfer. Every topic contains three core auto questions, one extension auto question, one core written response and one extension written response.
+The exam workspace contains 66 practice items across 8 topics: 44 automatically marked multiple-choice/calculation items and 16 written responses with point-based self-assessment. It covers the eight additional explorers plus genetics/cell division, reaction rates and heat transfer. Every topic contains three core auto questions, one extension auto question, one core written response and one extension written response.
 
 The following user-supplied files were text-extracted and relevant sections reviewed:
 
@@ -58,7 +58,7 @@ Progress is local to the browser and origin. First-check accuracy, current-run r
 
 ## Timed mock exams
 
-Two fixed mixed-topic papers select existing items from the revision bank, so students may recognise questions from topic practice. Each paper samples all 11 topics with one auto-marked item and one written response per topic. Core: 22 questions, 44 marks, 55 minutes. Extension: 22 questions, 55 marks, 70 minutes. These durations and difficulty labels are practice settings, not official school exam specifications. Optional 25% or 50% extra time is selected before starting.
+Two fixed mixed-topic papers select existing items from the revision bank, so students may recognise questions from topic practice. Each paper samples all 8 topics with one auto-marked item and one written response per topic. Core: 16 questions, 32 marks, 55 minutes. Extension: 16 questions, 40 marks, 70 minutes. These durations and difficulty labels are practice settings, not official school exam specifications. Optional 25% or 50% extra time is selected before starting.
 
 The timer uses an absolute deadline stored in localStorage. It continues while the tab is hidden or reloaded. If the browser is closed, saved answers are submitted on the next visit after the deadline; the app does not claim to run while closed. An expired attempt cannot accept more answers through the interface. The intended workflow is one browser tab at a time. This client-only practice app is not a secure assessment platform.
 

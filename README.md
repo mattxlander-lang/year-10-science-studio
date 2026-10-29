@@ -4,7 +4,7 @@ An interactive revision prototype for Victorian Year 10 Science. Original HTML, 
 
 ## Open the library
 
-Live private site: https://science-study-library-2026-lab.opensiren64.chatgpt.site/#moreLabs
+Live site: https://science-study-library-2026-lab.opensiren64.chatgpt.site/#moreLabs
 
 Serve the static directory locally:
 
@@ -18,16 +18,13 @@ Then open http://127.0.0.1:8765 . No installation or build is needed. The downlo
 
 - Mitosis, meiosis and Punnett-square revision activities, quizzes and self-assessment.
 - Crossing over, DNA organisation, temperature and reaction rates, heat transfer.
-- Electricity: ideal series/parallel resistor circuits, main switch, variable supply and resistors, current and voltage readouts.
 - Newton’s laws: force/mass controls, coasting after release, velocity graph, two-cart force pairs.
 - Evolution: one-locus selection over generations, reversible environmental pressure, allele-frequency graph.
 - Periodic patterns: neutral atoms 1–20, electron shells and outer electrons.
-- Big Bang evidence: expansion, observer choice and cosmological redshift.
-- Global change: albedo and a one-layer radiative-equilibrium model, with explicit limitations.
 - Chemical reactions: three balancing challenges and atom accounting.
 - Immunology: a supplementary five-stage immune-memory sequence.
 
-These are focused models, not complete courses or a substitute for the school exam checklist. The exam workspace records first-check results, current quiz runs, best completed runs, drafts and written self-assessments for 11 topics. The original three genetics activities retain their separate completion checks. Student drafts and progress stay in browser local storage; no backend, accounts or analytics are implemented in the source.
+These are focused models, not complete courses or a substitute for the school exam checklist. The exam workspace records first-check results, current quiz runs, best completed runs, drafts and written self-assessments for 8 topics. The original three genetics activities retain their separate completion checks. Student drafts and progress stay in browser local storage; no backend, accounts or analytics are implemented in the source.
 
 ## Tests
 
@@ -44,13 +41,13 @@ Numerical checks cover circuit conservation, motion and coasting, selection dire
 
 ## Exam practice
 
-66 original/adapted questions: 44 auto-marked items and 22 written responses. Each of 11 topics has core and extension practice, feedback and a source note. Progress stays in this browser; changing device/browser does not transfer it. Use the JSON export to keep a readable record. Written marks are self-assessed, not AI-graded. Original exam documents are not redistributed.
+48 original/adapted questions: 32 auto-marked items and 16 written responses. Each of 8 topics has core and extension practice, feedback and a source note. Progress stays in this browser; changing device/browser does not transfer it. Use the JSON export to keep a readable record. Written marks are self-assessed, not AI-graded. Original exam documents are not redistributed.
 
 ## Timed mocks
 
-- Core: 22 questions, 44 marks, 55 minutes.
-- Extension: 22 questions, 55 marks, 70 minutes.
-- Both sample all 11 topics from the existing question bank; these are fixed practice papers.
+- Core: 16 questions, 32 marks, 55 minutes.
+- Extension: 16 questions, 40 marks, 70 minutes.
+- Both sample all 8 topics from the existing question bank; these are fixed practice papers.
 - Optional 25%/50% extra time, absolute-deadline countdown, autosave, flags and early/automatic submission.
 - Topic breakdown, missing-point revision suggestions and direct practice links.
 - Written marks remain pending until self-assessment; combined scores explicitly include those marks.
@@ -62,7 +59,7 @@ Open the mocks at `#mockExams`. The durations are practice settings, not officia
 
 - `dist/index.html`: core study library and genetics activities.
 - `dist/labs.js`, `dist/labs.css`: visual lab and shared styling.
-- `dist/remaining.js`: eight additional topic explorers.
+- `dist/remaining.js`: five additional topic explorers.
 - `dist/science-models.js`: deterministic numerical teaching models.
 - `dist/exam-bank.js`: question content and practice marking guides.
 - `dist/exam-core.js`: grading, validation and progress rules.
@@ -84,4 +81,6 @@ Choose estimated 15-, 30- or 45-minute sessions. Model exploration and written r
 `dist/plan-core.js` holds prioritisation/session rules; `dist/plan.js` and `dist/plan.css` provide the interface. `tests/plan.test.cjs` checks pending marks, priorities, time budgets and completion thresholds.
 
 ## Living workbench
-Six generated 3D-style exhibits provide navigation to all 11 study topics. Each opens a drawer with model and exam-practice links. Responsive crops share one optimised WebP image; pointer tilt, light pulses and floating motes add motion. A saved motion toggle and system reduced-motion preference disable those effects. Artwork is decorative, not an instructional scientific diagram.
+Four generated 3D-style exhibits provide navigation to all 8 study topics. Each opens a drawer with model and exam-practice links. Responsive crops share one optimised WebP image; pointer tilt, light pulses and floating motes add motion. A saved motion toggle and system reduced-motion preference disable those effects. Artwork is decorative, not an instructional scientific diagram.
+
+Current scope: eight topics. Electricity, Big Bang evidence and Global change are excluded from navigation, practice, mock scoring and revision plans. Remaining stored practice is preserved; historical mock results are recalculated for this scope using the original retained questions. The gh-pages branch serves the static assets from its root.
