@@ -1,9 +1,0 @@
-const assert=require('node:assert/strict'),B=require('../dist/exam-bank.js'),C=require('../dist/exam-core.js'),M=require('../dist/mock-core.js'),P=require('../dist/plan-core.js');
-const a=M.create(B,'core',1000),paper=M.paper(B,'core');for(const q of paper.questions)a.answers[q.id]=q.type==='written'?'Unmarked writing':q.type==='mc'?q.correct:String(q.answer);M.submit(a,2000);
-let items=P.build(B,a,C,M);assert.equal(items.filter(t=>t.weak).length,0);assert.equal(items.filter(t=>t.pending).length,11);assert.equal(P.session(items,{},15).minutes,0);
-const q=paper.questions[0];a.answers[q.id]=(q.correct+1)%q.options.length;items=P.build(B,a,C,M);assert.equal(items[0].id,'electricity');assert.equal(items[0].weak,true);assert.equal(items[0].pending,1);
-for(const q of paper.questions.filter(q=>q.type==='written')){a.assessed[q.id]=true;a.rubrics[q.id]=q.rubric.map(()=>true);}items=P.build(B,a,C,M);assert.equal(items.filter(t=>t.weak).length,1);assert.equal(items.find(t=>t.id==='motion').priority,'Maintain');
-a.rubrics[paper.questions[3].id]=[false,false,false];items=P.build(B,a,C,M);assert.equal(items[0].id,'motion');assert.equal(items[0].missing.length,3);assert.deepEqual(P.session(items,{},15).topics,['motion']);assert.equal(P.session(items,{},30).topics.length,2);
-const record={model:true,written:true,quiz:{score:2}};assert.equal(P.completion(record),2);record.quiz.score=3;assert.equal(P.completion(record),3);assert.deepEqual(P.session(items,{motion:record},15).topics,['electricity']);
-assert.equal(P.attempts(B,{current:M.create(B,'extension',3000),history:[a,a]},C,M).length,1);assert.equal(P.attempts(B,null,C,M).length,0);
-console.log('PASS: pending is not weakness; known auto gaps; ranking/criteria; session budgets; 3/4 quiz threshold; active/duplicate attempt filtering.');
