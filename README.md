@@ -35,6 +35,7 @@ These are focused models, not complete courses or a substitute for the school ex
 node tests/models.test.cjs
 node tests/exam.test.cjs
 node tests/mock.test.cjs
+node tests/plan.test.cjs
 node --check dist/remaining.js
 node --check dist/labs.js
 ```
@@ -73,3 +74,11 @@ Open the mocks at `#mockExams`. The durations are practice settings, not officia
 The hosted Site and this GitHub repository are separate destinations; a GitHub commit does not automatically redeploy the Site. For other static hosting, publish the contents of `dist/`.
 
 No proprietary lesson PDFs, answer sheets, student records, credentials or browser exports are included. No affiliation with or endorsement by Impact, Stile or VCAA is implied.
+
+## Personalised revision plans
+
+Open `#revisionPlan` or choose “Build my revision plan” from mock results. The latest completed mock is selected automatically; older saved results remain selectable. Known missed marks prioritise topics, while unmarked writing is flagged for marking first. Each plan links to the matching animation, a fresh topic quiz, and written marking guides.
+
+Choose estimated 15-, 30- or 45-minute sessions. Model exploration and written revision use explicit student check-offs. Completing a linked fresh four-question quiz with at least 3/4 marks completes its quiz step automatically. Records are saved separately for each mock in this browser; they do not sync across devices. Completion records practice, not mastery. New mock results create a new plan. Use one tab for revision to avoid conflicting local changes.
+
+`dist/plan-core.js` holds prioritisation/session rules; `dist/plan.js` and `dist/plan.css` provide the interface. `tests/plan.test.cjs` checks pending marks, priorities, time budgets and completion thresholds.
