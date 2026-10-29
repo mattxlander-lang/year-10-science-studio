@@ -68,3 +68,6 @@ The current attempt and up to six archived finished attempts persist locally und
 
 ## Revision-plan assumptions
 Plans use the existing mock result and its self-assessed written marking points. They add no new source questions. The 3/4 quiz target and five-minute task estimates are prototype practice settings, not school/VCAA standards. Two sampled questions per topic cannot establish mastery. Unmarked writing does not lower the priority score; missing/blank responses retain the mock's zero-mark treatment.
+
+## Workbench artwork
+Original artwork generated with the built-in image-generation tool, then compressed to WebP. Prompt: cinematic three-dimensional museum workbench in midnight teal, walnut and brass; six exhibits in two rows of three: electric bulb, Newton cradle and trolley, DNA bell jar, evolutionary terrarium, chemistry flask and molecules, Earth/space orrery. No text. Artwork is a decorative navigation metaphor, not scientific evidence or a scale model.

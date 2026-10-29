@@ -82,3 +82,6 @@ Open `#revisionPlan` or choose “Build my revision plan” from mock results. T
 Choose estimated 15-, 30- or 45-minute sessions. Model exploration and written revision use explicit student check-offs. Completing a linked fresh four-question quiz with at least 3/4 marks completes its quiz step automatically. Records are saved separately for each mock in this browser; they do not sync across devices. Completion records practice, not mastery. New mock results create a new plan. Use one tab for revision to avoid conflicting local changes.
 
 `dist/plan-core.js` holds prioritisation/session rules; `dist/plan.js` and `dist/plan.css` provide the interface. `tests/plan.test.cjs` checks pending marks, priorities, time budgets and completion thresholds.
+
+## Living workbench
+Six generated 3D-style exhibits provide navigation to all 11 study topics. Each opens a drawer with model and exam-practice links. Responsive crops share one optimised WebP image; pointer tilt, light pulses and floating motes add motion. A saved motion toggle and system reduced-motion preference disable those effects. Artwork is decorative, not an instructional scientific diagram.
