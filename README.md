@@ -34,6 +34,7 @@ These are focused models, not complete courses or a substitute for the school ex
 ```sh
 node tests/models.test.cjs
 node tests/exam.test.cjs
+node tests/mock.test.cjs
 node --check dist/remaining.js
 node --check dist/labs.js
 ```
@@ -44,6 +45,18 @@ Numerical checks cover circuit conservation, motion and coasting, selection dire
 
 66 original/adapted questions: 44 auto-marked items and 22 written responses. Each of 11 topics has core and extension practice, feedback and a source note. Progress stays in this browser; changing device/browser does not transfer it. Use the JSON export to keep a readable record. Written marks are self-assessed, not AI-graded. Original exam documents are not redistributed.
 
+## Timed mocks
+
+- Core: 22 questions, 44 marks, 55 minutes.
+- Extension: 22 questions, 55 marks, 70 minutes.
+- Both sample all 11 topics from the existing question bank; these are fixed practice papers.
+- Optional 25%/50% extra time, absolute-deadline countdown, autosave, flags and early/automatic submission.
+- Topic breakdown, missing-point revision suggestions and direct practice links.
+- Written marks remain pending until self-assessment; combined scores explicitly include those marks.
+- Current attempt plus six archived results stay in the same browser. Use one tab per attempt.
+
+Open the mocks at `#mockExams`. The durations are practice settings, not official school exam timings.
+
 ## Source files
 
 - `dist/index.html`: core study library and genetics activities.
@@ -53,7 +66,8 @@ Numerical checks cover circuit conservation, motion and coasting, selection dire
 - `dist/exam-bank.js`: question content and practice marking guides.
 - `dist/exam-core.js`: grading, validation and progress rules.
 - `dist/exam.js`, `dist/exam.css`: exam workspace UI.
-- `tests/models.test.cjs`, `tests/exam.test.cjs`: model and assessment checks.
+- `dist/mock-core.js`, `dist/mock.js`, `dist/mock.css`: timed papers, deadlines, results and revision suggestions.
+- `tests/models.test.cjs`, `tests/exam.test.cjs`, `tests/mock.test.cjs`: model and assessment checks.
 - `SOURCES.md`: resource coverage, scientific assumptions and limitations.
 
 The hosted Site and this GitHub repository are separate destinations; a GitHub commit does not automatically redeploy the Site. For other static hosting, publish the contents of `dist/`.
