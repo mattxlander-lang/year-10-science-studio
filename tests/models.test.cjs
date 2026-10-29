@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict');
+const M=require('../dist/science-models.js');
+const close=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} != ${b}`);
+let c=M.circuit(6,10,20,false);close(c.current,.2);close(c.v1+c.v2,6);close(c.i1,c.i2);
+c=M.circuit(6,10,20,true);close(c.current,.9);close(c.i1+c.i2,c.current);close(c.v1,6);close(c.v2,6);close(M.circuit(6,10,20,true,false).current,0);
+let d=M.motion(4,2,5,true);close(d.a,0);close(d.v,4);close(d.x,16);close(M.motion(4,4,1).a,1);
+close(M.selection(.5,.7,'neutral'),.5);assert.ok(M.selection(.5,.5,'A')>.5);assert.ok(M.selection(.5,.5,'a')<.5);close(M.selection(1,.5,'a'),1);close(M.selection(0,.5,'A'),0);
+for(let z=1;z<=20;z++)close(M.shells(z).reduce((a,b)=>a+b,0),z);assert.deepEqual(M.shells(20),[2,8,8,2]);
+assert.ok(M.climate(.3,.8)>M.climate(.3,0));assert.ok(M.climate(.6,.8)<M.climate(.3,.8));assert.ok(Math.abs(M.climate(.3,0)+18)<2);
+console.log('PASS: circuit conservation; Newton motion/coasting; selection; shell counts; climate direction and no-atmosphere baseline.');

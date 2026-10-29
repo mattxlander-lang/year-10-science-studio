@@ -1,0 +1,33 @@
+# Resource notes — reviewed 29 October 2026
+
+## Inspection scope
+
+Impact reference: https://impactcurriculum.au/resources/vc/science/year_10/core
+
+The earlier audit inspected all ten unit entries and the exam/preparation entry, expanded available curriculum/lesson/support listings, reviewed 82 published lesson listings across eight units and read available unit plans. This is not an audit of every slide, assessment, video or linked booklet.
+
+The supplied Stile Y10 Prep collection contained 270 PDF files (265 distinct files; 2,007 pages). Text extraction/indexing does not mean every page was manually reviewed. Relevant selected lessons were read for these models. Exports may include school-authored content as well as Stile material; their presence is not evidence that every statement is authoritative. Models use original explanatory prose and diagrams.
+
+## Model connections
+
+| Model | Resource connection | Main assumptions / next development |
+|---|---|---|
+| Electricity | Impact 10P01V: introduction, Ohm's-law investigation, series/parallel circuits | Ideal ohmic resistors and battery; conventional-current symbols, no wire resistance. No matching electricity Stile lesson was identified. Generation, meters and energy comparisons remain beyond this model. |
+| Newton's laws | Impact 10P02V; Stile first, second and third laws; acceleration and graphs | Horizontal frictionless motion, initial rest, constant push, optional cutoff at 2 s. Third-law forces act on different carts; equal forces do not imply equal accelerations. |
+| Evolution | Impact 10B02V: variation, selection pressures, allele-frequency change | One diploid locus; random mating; fitness AA/Aa/aa = 1, 1-s/2, 1-s when A is favoured, reversed for a. p' = [p²wAA + p(1-p)wAa]/mean fitness. No drift, mutation or migration; symbols are rounded expected proportions. No matching Stile evolution lesson was identified. |
+| Periodic table | Impact 10C01V; Stile structure of atoms, electron configurations, valence electrons | Neutral ground-state atoms 1–20 only. Shell diagrams are not literal orbits. Neutrons and isotopes omitted. |
+| Big Bang | Impact 10E01V: stellar light, expansion and evidence; NASA below | Wavelength scales with expansion factor, z = factor - 1. Schematic unbound galaxies; not realistic cosmic history or a universe with an observational centre. |
+| Global change | Impact 10E02V: greenhouse effect, albedo and modelling; Stile climate introduction reviewed for context; MIT below | One-layer radiative equilibrium, fixed solar irradiance 1361 W/m². Ts = [S(1-alpha)/(4 sigma (1-epsilon/2))]^(1/4). Not a prediction, observed dataset or estimate of CO2 sensitivity. No clouds, convection or feedbacks. |
+| Reactions | Stile balancing chemical equations and reaction types | Conservation of atom counts; formulas fixed, coefficients adjustable. Does not teach all reaction classifications or mechanisms. Impact 10C02V lessons were pending during the resource audit. |
+| Immunology | Supplementary CDC reference below | Conceptual barriers/recognition/response/memory/re-exposure sequence. No measured kinetics or protection estimate. Impact 10B04V lessons pending; no matching Stile lesson identified. |
+| Genetics and existing visual lab | Impact 10B01V / 10B03V; selected Stile mitosis, meiosis, Punnett-square lessons/check-ins, DNA and genes | Pea examples avoid simplistic single-gene human traits; distinguish chromosome count, DNA amount and complementary strands. Crossing over has a separate four-chromatid model. |
+| Reaction rates and heat | Stile temperature and rates, conduction, convection, radiation | Illustrative kinetics and schematic motion. Equal final yield is a stated assumption, not a general rule. |
+
+## Supplementary primary sources
+
+- NASA: https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-cosmological-redshift/
+- NASA JPL teaching resource: https://www.jpl.nasa.gov/edu/resources/lesson-plan/math-of-the-expanding-universe/
+- MIT, Climate Science, Risk & Solutions: https://climateprimer.mit.edu/climate-science-risk-solutions-1220.pdf
+- CDC, Principles of Vaccination (immune memory): https://www.cdc.gov/pinkbook/hcp/table-of-contents/chapter-1-principles-of-vaccination.html
+
+No source lesson documents are redistributed. Full Victorian Curriculum coverage, richer question banks, experimental datasets, generation/energy comparisons, speciation/evidence and teacher assessment remain future development.
