@@ -4,7 +4,7 @@ An interactive revision prototype for Victorian Year 10 Science. Original HTML, 
 
 ## Open the library
 
-Live site: https://science-study-library-2026-lab.opensiren64.chatgpt.site/#moreLabs
+Live site: https://mattxlander-lang.github.io/year-10-science-studio/
 
 Serve the static directory locally:
 
@@ -84,3 +84,6 @@ Choose estimated 15-, 30- or 45-minute sessions. Model exploration and written r
 Four generated 3D-style exhibits provide navigation to all 8 study topics. Each opens a drawer with model and exam-practice links. Responsive crops share one optimised WebP image; pointer tilt, light pulses and floating motes add motion. A saved motion toggle and system reduced-motion preference disable those effects. Artwork is decorative, not an instructional scientific diagram.
 
 Current scope: eight topics. Electricity, Big Bang evidence and Global change are excluded from navigation, practice, mock scoring and revision plans. Remaining stored practice is preserved; historical mock results are recalculated for this scope using the original retained questions. The gh-pages branch serves the static assets from its root.
+
+## Watch & learn
+All 51 original YouTube links across 24 books are restored: genetics (29), evolution (10), reaction rates (6), heat transfer (6). Original book groupings and extension tags are preserved. Topic models, workbench routes and exam practice link to the videos. The original had no videos for motion, periodic patterns, chemical reactions or immunology. Videos require internet access. Electricity and Earth/space remain excluded.

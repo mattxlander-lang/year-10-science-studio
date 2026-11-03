@@ -71,3 +71,6 @@ Plans use the existing mock result and its self-assessed written marking points.
 
 ## Workbench artwork
 Original artwork generated with the built-in image-generation tool, then compressed to WebP. Prompt: cinematic three-dimensional museum workbench in midnight teal, walnut and brass; six exhibits in two rows of three: electric bulb, Newton cradle and trolley, DNA bell jar, evolutionary terrarium, chemistry flask and molecules, Earth/space orrery. No text. Artwork is a decorative navigation metaphor, not scientific evidence or a scale model.
+
+## Original video library — 4 November 2026
+Source: https://claude.ai/artifact/4XsyKvpQM2eBWmxeb6ESNb . Reviewed all 24 books and transcribed all 51 original YouTube URLs and labels into dist/video-bank.js, retaining extension tags. YouTube metadata was available for 50 links; the remaining meiosis recap (NR9zTvMg-pE) loaded its title and player in the browser. Availability was checked, not full video content. No original videos were present for motion, periodic patterns, chemical reactions or immunology. Electricity and Earth/space remain excluded.
