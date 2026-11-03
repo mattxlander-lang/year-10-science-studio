@@ -1,72 +1,381 @@
-/* Original and adapted practice; source papers are not redistributed. */
-(function(root){
-const mc=(id,level,prompt,options,correct,explain,stimulus)=>({id,type:'mc',level,prompt,options,correct,explain,stimulus,marks:1});
-const num=(id,level,prompt,answer,unit,explain,stimulus)=>({id,type:'number',level,prompt,answer,unit,tolerance:.01,explain,stimulus,marks:1});
-const written=(id,level,prompt,rubric,model,stimulus)=>({id,type:'written',level,prompt,rubric,model,stimulus,marks:rubric.length});
-const bank={version:1,topics:[
-{id:'motion',title:'Newton’s laws',link:'moreLabs',source:'Adapted skills from 2022 NEAP collection, Physical Sciences: net force, force pairs and F = ma. New numbers, scenarios and diagram.',questions:[
-mc('mo1','core','A puck moves on a horizontal frictionless surface. The net force becomes zero. What happens next?',['It immediately stops.','It accelerates more slowly.','It continues at constant velocity.','It needs a forward force to keep moving.'],2,'Newton’s first law: zero net force means zero acceleration. It can be moving at a constant velocity; zero force does not imply zero velocity.'),
-num('mo2','core','A 3 kg cart experiences a net horizontal force of 12 N. Calculate its acceleration.',4,'m/s²','a = Fnet/m = 12/3 = 4 m/s². Use the net force, not a single force if other unbalanced forces also act.'),
-mc('mo3','core','Cart A pushes cart B. Which describes the third-law force pair?',['Both forces act on cart A and cancel.','A exerts a force on B; B simultaneously exerts an equal opposite force on A.','The heavier cart always exerts the greater force.','B pushes back only after A stops pushing.'],1,'The forces are simultaneous and act on different objects. Equal force sizes can produce different accelerations when masses differ.'),
-num('mo4','extension','Use the velocity–time graph. What is the displacement from 0 to 6 s?',24,'m','Area under the graph = triangle ½ × 4 × 6 + rectangle 2 × 6 = 12 + 12 = 24 m. The slope gives acceleration, not displacement.','motionGraph'),
-written('mo5','core','A 2 kg cart starts from rest and experiences a constant net force of 6 N for 2 s. The force is then removed on a frictionless track. Calculate its acceleration during the push, its velocity at 2 s, and describe its later motion.',['a = F/m = 6/2 = 3 m/s².','v = u + at = 0 + 3 × 2 = 6 m/s at 2 s.','After release it continues at 6 m/s in the same direction because net force and acceleration are zero.'],'The cart accelerates at 3 m/s² and reaches 6 m/s after 2 s. It then coasts at 6 m/s because a net force is needed to change velocity, not to maintain it.'),
-written('mo6','extension','A 50 kg skater and a 75 kg skater push apart on frictionless ice. During the push, each experiences a horizontal force of 150 N. Compare their forces and accelerations, and explain why the forces do not cancel on either skater.',['The forces have equal magnitude, 150 N, and opposite directions.','The 50 kg skater accelerates at 150/50 = 3 m/s².','The 75 kg skater accelerates at 150/75 = 2 m/s², opposite to the first skater.','The third-law forces act on different skaters, so they do not cancel in the net force on either individual.'],'The skaters exert equal and opposite forces. Their accelerations differ because a = F/m: the lighter skater accelerates at 3 m/s² and the heavier at 2 m/s² in the opposite direction. Only forces acting on the same object are combined when calculating its net force.')
-]},
-{id:'evolution',title:'Evolution',link:'moreLabs',source:'Adapted from 2020 natural-selection quiz; 2024 CORE Q8–11; 2025 CORE Q9–11 and evolution draft; 2025 EXT bottleneck question. Original tree and scenarios. A-level classification material used only for general evidence skills.',questions:[
-mc('ev1','core','After an environment changes, an inherited trait becomes more common over generations. Which explanation is consistent with natural selection?',['Individuals deliberately change their genes to cope.','All individuals develop the trait because they need it.','The environment creates only helpful mutations.','Individuals already carrying an advantageous trait leave more surviving offspring.'],3,'Selection acts on existing heritable variation through differences in reproductive success. New mutations are not directed by an organism’s needs.'),
-mc('ev2','core','In the tree shown, which living species is most closely related to A?',['B','C','D','All are equally closely related.'],0,'A and B share the most recent common ancestor. Relatedness follows branching history, not how near labels happen to be on a page.','tree'),
-mc('ev3','core','A chance storm kills most beetles on an island irrespective of colour. Survivors happen to be mostly green. Which process best explains the immediate allele-frequency change?',['Artificial selection','A genetic bottleneck involving drift','A new mutation in every survivor','Natural selection favouring green camouflage'],1,'The stated survival is by chance, not colour advantage. A small surviving sample can have different allele frequencies: a bottleneck causes genetic drift.'),
-mc('ev4','extension','Which observation provides the strongest evidence that two geographically separated, sexually reproducing populations have become different species under the biological species concept?',['They occupy different islands.','Their average sizes differ slightly.','They can no longer interbreed to produce viable, fertile offspring.','They have different population sizes.'],2,'Geographical separation can reduce gene flow, but reproductive isolation is the key criterion here. This species concept has limits, such as for fossils and asexual organisms.'),
-written('ev5','core','A bacterial population includes a few cells with inherited antibiotic resistance before treatment. After repeated treatment, resistance is common. Explain the change using natural selection.',['Heritable variation existed before treatment: some bacteria were resistant.','The antibiotic inhibited or killed susceptible bacteria more than resistant bacteria.','Resistant survivors reproduced and passed on resistance, increasing its frequency over generations.'],'Some bacteria were already resistant. Treatment acted as a selection pressure, leaving resistant bacteria with greater survival and reproductive success. Their descendants inherited resistance, so the proportion of resistant bacteria increased. The antibiotic did not give bacteria the mutations they needed.'),
-written('ev6','extension','A river divides a population of small mammals. Food differs on each side. Explain how this could eventually result in allopatric speciation; do not assume separation alone immediately makes new species.',['The barrier reduces or prevents gene flow between the populations.','Inherited variation exists; mutation can supply new alleles, and drift may also alter frequencies.','Different selection pressures lead to different reproductive success and diverging allele frequencies over generations.','Reproductive isolation eventually develops so members cannot interbreed to produce viable, fertile offspring even if they meet.'],'Isolation limits gene flow. The populations contain heritable variation, with mutation adding new alleles. Different foods favour different traits, and selection and drift can lead to divergence over many generations. If reproductive isolation develops, they become separate species under the biological species concept.')
-]},
-{id:'atoms',title:'Periodic patterns',link:'moreLabs',source:'Adapted skills from 2022 NEAP collection, Chemical Sciences Q10 and Q12; earlier Impact/Stile atom and electron-shell resources. Original data and questions.',questions:[
-mc('at1','core','What determines an element’s position in the modern periodic table?',['Its number of neutrons','Its mass in grams','Its number of protons','Its electrical charge'],2,'Elements are ordered by atomic number, which is the number of protons. Isotopes can have different neutron numbers without changing element identity.'),
-num('at2','core','A neutral magnesium atom has atomic number 12. How many electrons does it contain?',12,'electrons','A neutral atom has equal numbers of protons and electrons. Atomic number 12 means 12 protons and therefore 12 electrons.'),
-mc('at3','core','Lithium has shells 2,1 and sodium has shells 2,8,1. What best explains their similar chemical behaviour?',['Both have one electron in their outer shell.','Both have the same number of occupied shells.','They have the same atomic mass.','Their nuclei contain the same number of protons.'],0,'Both have one outer-shell electron. Their different proton counts identify different elements; their similar valence arrangements help explain common group properties.'),
-mc('at4','extension','A substance melts at −12 °C and boils at 62 °C at the stated pressure. What is its equilibrium state at 25 °C?',['Solid','Gas','Both solid and gas only','Liquid'],3,'25 °C is above the melting point and below the boiling point, so it is liquid. Compare temperature with both boundaries.'),
-written('at5','core','Describe the electron arrangement of neutral chlorine (atomic number 17), identify its outer-shell electron count, and explain why chlorine and fluorine have similar chemical properties.',['Chlorine has 17 electrons arranged 2,8,7 in this shell model.','It has seven electrons in the outer shell.','Fluorine also has seven outer-shell electrons; this similar valence arrangement explains related chemical behaviour.'],'Neutral chlorine has 17 electrons: 2,8,7. Its seven outer electrons match fluorine’s outer-shell count, so both are group 17 elements with related chemical behaviour.'),
-written('at6','extension','Compare a neutral sodium atom (11 protons) and a sodium ion Na⁺. Give each electron arrangement and explain why the ion is still sodium.',['The neutral atom has 11 electrons, arranged 2,8,1.','Na⁺ has lost one electron and has 10 electrons, arranged 2,8.','Its +1 charge follows from 11 protons and 10 electrons.','It still has 11 protons; proton number, not electron number, determines element identity.'],'A neutral sodium atom has 2,8,1 electrons. Losing one electron forms Na⁺ with 2,8. The unchanged 11 protons outnumber its electrons by one, giving the +1 charge. Ion formation does not change the element.')
-]},
-{id:'reactions',title:'Chemical reactions',link:'moreLabs',source:'Adapted skills from 2022 NEAP Chemical Sciences; 2025 CORE Q12–13; 2025 EXT chemistry. New equations and numerical values.',questions:[
-mc('re1','core','Which is the simplest balanced equation for magnesium reacting with oxygen?',['Mg + O₂ → MgO','Mg₂ + O₂ → Mg₂O₂','2Mg + O₂ → 2MgO','Mg + O → MgO'],2,'Two magnesium atoms combine with one oxygen molecule to make two MgO formula units. Coefficients change amounts; changing formulas changes the substances.'),
-num('re2','core','How many oxygen atoms are represented by 3CO₂?',6,'oxygen atoms','The coefficient 3 multiplies the subscript 2: 3 × 2 = 6 oxygen atoms.'),
-mc('re3','core','An acid reacts with a carbonate. Which gas is usually released?',['Hydrogen','Nitrogen','Oxygen','Carbon dioxide'],3,'Acid + carbonate → salt + water + carbon dioxide. Do not confuse this with many metal–acid reactions, which release hydrogen.'),
-mc('re4','extension','In a sealed reaction vessel, reactant concentrations fall as products form. Which statement explains conservation of mass?',['Reactant atoms have disappeared.','Atoms are rearranged into products, so total mass remains constant.','Products have no mass.','Mass is conserved only if concentrations remain unchanged.'],1,'Concentrations of particular substances can change while the atoms and total mass of the closed system are conserved.'),
-written('re5','core','Balance H₂ + O₂ → H₂O using the smallest whole-number coefficients. Explain the atom counts and why changing H₂O to H₂O₂ is not a valid balancing method.',['The balanced equation is 2H₂ + O₂ → 2H₂O.','There are four H atoms and two O atoms on each side.','Changing the subscript would make a different substance; balance by changing coefficients.'],'2H₂ + O₂ → 2H₂O gives four hydrogen atoms and two oxygen atoms on both sides. H₂O₂ is hydrogen peroxide, not water, so changing the formula would change the reaction.'),
-written('re6','extension','Calcium carbonate reacts with hydrochloric acid to form calcium chloride, water and carbon dioxide. Write a balanced symbol equation, state an observation, and explain why an open flask may lose mass.',['CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂ is correctly balanced.','Bubbles/effervescence are observed as gas forms (the solid may also decrease).','Carbon dioxide escapes from an open flask, reducing the measured mass remaining in it.','Total mass is conserved if the escaped gas is included; a closed system retains the products.'],'CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂. Bubbles form as carbon dioxide is produced. Gas escaping makes the open flask’s contents weigh less, but matter is not destroyed: include the gas to account for the conserved total mass.')
-]},
-{id:'immunity',title:'Immunology',link:'moreLabs',source:'Original supplementary questions aligned to the immune-memory explorer and CDC source. No matching immunology questions identified in the supplied past papers.',questions:[
-mc('im1','core','Which is a physical first-line defence against pathogens?',['Intact skin','Memory B cells','Antigen-specific antibodies','A fever alone'],0,'Intact skin forms a physical barrier. Memory cells and antibodies are components of adaptive responses rather than the external physical barrier.'),
-mc('im2','core','Which cells secrete large amounts of antibodies during an adaptive response?',['Red blood cells','All body cells equally','Activated B cells differentiated into plasma cells','Memory cells only, with no activation'],2,'Plasma cells develop from activated B cells and secrete antibodies. Memory B cells can contribute to a later response after reactivation.'),
-mc('im3','core','Why can a later response to the same antigen be faster?',['The pathogen always becomes harmless.','Every immune cell recognises every antigen.','The body no longer needs any immune cells.','Antigen-specific memory cells can respond more rapidly.'],3,'Memory cells persist after the initial response and can be reactivated. Protection is not necessarily complete or lifelong and is specific to the antigen.'),
-mc('im4','extension','A simplified dataset shows detectable antibodies at day 7 after first exposure and day 3 after a later exposure to the same antigen. Which conclusion is supported?',['All infections will now be prevented forever.','The later antibody response begins sooner in this dataset.','No innate response happened.','Antibodies are identical to pathogens.'],1,'The dataset supports a faster later response, not lifelong protection or conclusions about unmeasured innate responses.'),
-written('im5','core','Explain how vaccination can prepare the immune system for a later encounter with a pathogen without requiring the person to experience the full disease.',['Vaccination exposes the immune system to an antigen, or instructions to produce an antigen, associated with a pathogen.','This can stimulate an adaptive response and formation of antigen-specific memory cells.','On later exposure, memory supports a faster or more effective response, reducing risk/severity without guaranteeing complete protection.'],'Vaccination presents an antigen or instructions for making one, stimulating an adaptive response and memory. A later encounter can then trigger a faster response. The exact protection depends on the vaccine, pathogen and person; it is not a guarantee that infection is impossible.'),
-written('im6','extension','Compare a physical barrier, an innate cellular response and an adaptive response. Explain why memory against one pathogen does not automatically protect against every pathogen.',['A physical barrier such as intact skin helps block entry.','An innate cellular response, such as phagocytosis, responds broadly to recognised pathogen features.','An adaptive response uses antigen-specific B/T-cell recognition and can establish memory.','Different pathogens may have different antigens; memory specificity limits automatic cross-protection.'],'Skin can prevent entry. Innate cells such as phagocytes respond to broad danger/pathogen features. Adaptive B and T cells recognise specific antigens and can form memory. A different pathogen may not carry the recognised antigen, so memory to one does not automatically protect against all others.')
-]},
-{id:'genetics',title:'Genetics & cell division',link:'studio',source:'Adapted from Genetics exam DRAFT 2025; 2025 CORE genetics; 2025 EXT Q6–7; 2024 CORE/EXT genetics. New scenarios and numbers; complements the original genetics checks.',questions:[
-mc('ge1','core','A diploid cell has 12 chromosomes. Immediately after DNA replication, before mitosis, how many chromosomes does it have?',['6','12','24','48'],1,'DNA replication makes sister chromatids, but chromosome number counted by centromeres remains 12 until chromatids separate.'),
-num('ge2','core','For a monohybrid cross Aa × Aa, what percentage of offspring is expected to have genotype aa?',25,'%','The four equally likely combinations are AA, Aa, Aa and aa, giving 1/4 = 25%. This is a probability for each offspring, not a required family ratio.'),
-mc('ge3','core','Which is the usual outcome of meiosis from a diploid starting cell?',['Two genetically identical diploid products','Four diploid products','Four haploid products with genetic variation','One cell with twice as many chromosomes'],2,'Meiosis involves two divisions after one DNA replication and produces haploid products. Crossing over and independent assortment contribute to variation.'),
-mc('ge4','extension','In a simple X-linked recessive model, a carrier mother XᴬXᵃ and unaffected father XᴬY have a son. What is the probability that this son is affected?',['50%','25%','0%','100%'],0,'Conditional on the child being a son, he receives Y from his father and has a 1/2 chance of receiving Xᵃ from his mother. The probability among all children is a different question.'),
-written('ge5','core','Compare mitosis and meiosis in division number, chromosome number of products and biological purpose.',['Mitosis has one division; meiosis has two after one DNA replication.','Mitosis preserves chromosome number; meiosis halves it to form haploid products.','Mitosis supports growth/repair (and asexual reproduction); meiosis supports sexual reproduction by producing haploid cells.'],'Mitosis divides once and preserves chromosome number, usually yielding two genetically similar cells for growth and repair. Meiosis divides twice and halves chromosome number, producing haploid cells used in sexual reproduction.'),
-written('ge6','extension','A homologous pair carries AB on one homologue and ab on the other. Explain how one crossover between the two gene locations can produce Ab and aB chromatids. Distinguish new allele combinations from new alleles.',['Homologous chromosomes pair in prophase I of meiosis.','Corresponding DNA segments are exchanged between two non-sister chromatids.','The selected chromatids become Ab and aB; uninvolved chromatids can retain AB and ab.','This recombines existing alleles; it does not itself require a new allele to be created by mutation.'],'During prophase I, homologues pair and two non-sister chromatids exchange corresponding segments. A crossover between the loci can create Ab and aB while the other chromatids retain AB and ab. The allele combinations are new, but the alleles themselves already existed.')
-]},
-{id:'rates',title:'Reaction rates',link:'visualLabs',source:'Adapted from 2024 CORE chemistry graph; 2025 CORE Q12–13; 2025 EXT chemistry; NEAP glow-stick investigation. Original dataset.',questions:[
-mc('ra1','core','Equal masses of calcium carbonate react with excess acid at the same temperature. Why does powder usually react faster than one large lump?',['Powder has more exposed surface area for collisions.','Powder contains more calcium carbonate by mass.','Powder changes the acid into a catalyst.','The lump has no particles.'],0,'Smaller pieces expose more surface per unit mass, increasing contact and collision opportunities. Equal mass does not mean equal surface area.'),
-num('ra2','core','Using the gas-volume data, calculate the mean production rate from 0 to 10 s.',2,'cm³/s','Mean rate = change in volume/change in time = (20 − 0)/(10 − 0) = 2 cm³/s.','rateTable'),
-mc('ra3','core','Why does increasing temperature usually speed up a reaction?',['It creates extra reactant atoms.','It always increases the final product amount.','Every collision becomes successful.','A greater fraction of collisions has enough energy to overcome the activation barrier.'],3,'Higher temperature raises average kinetic energy. More collisions meet the energy requirement (and collisions may be more frequent), but not every collision succeeds.'),
-mc('ra4','extension','A catalyst speeds up a reaction primarily by:',['Increasing the activation energy.','Providing an alternative pathway with lower activation energy.','Being permanently used up as the main reactant.','Guaranteeing a greater final equilibrium yield.'],1,'A catalyst lowers the activation barrier for an alternative pathway and is regenerated overall. It changes rate, not the equilibrium composition at fixed conditions.'),
-written('ra5','core','The gas volume increases quickly at first, then more slowly, and finally stops increasing. Explain each stage using reacting particles.',['Initially reactants are readily available, so successful collisions are relatively frequent.','As reactants are consumed, fewer suitable collisions occur per second and the rate slows.','A plateau can occur when a limiting reactant is used up, so no further gas is produced under these conditions.'],'The initial high reactant availability gives a high collision rate. As reactants are consumed, successful collisions become less frequent and the curve becomes less steep. When the limiting reactant is exhausted, the product volume plateaus.','rateTable'),
-written('ra6','extension','Design a fair comparison of the effect of temperature on magnesium reacting with hydrochloric acid. State what to vary, what to measure, two controls and how to improve reliability.',['Vary temperature systematically while keeping other chosen conditions constant.','Measure a suitable rate indicator, such as hydrogen volume at fixed intervals or time to a specified gas volume.','Control two relevant variables, such as acid volume/concentration and magnesium mass/surface area.','Repeat each temperature, compare means and identify inconsistent results; use consistent apparatus and a safe teacher-approved method.'],'Use several controlled temperatures and record hydrogen volume at regular intervals. Keep acid volume and concentration and magnesium mass/surface condition fixed. Repeat each temperature and compare mean rates, using the same apparatus and a teacher-approved procedure. A single faster trial is weaker evidence than repeatable results.')
-]},
-{id:'heat',title:'Heat transfer',link:'visualLabs',source:'Adapted skills from 2025 CORE Q14; 2025 EXT physics; 2024 CORE hot-air-balloon context; earlier Stile conduction/convection/radiation lessons.',questions:[
-mc('he1','core','The handle of a metal spoon warms while its other end sits in hot water. The main transfer along the spoon is:',['Convection','Evaporation','Conduction','Nuclear radiation'],2,'Energy transfers within the solid by interactions among particles and, in metals, mobile electrons. The solid does not circulate as a fluid.'),
-mc('he2','core','Which mechanism transfers energy from the Sun through the vacuum of space?',['Conduction','Radiation','Convection','Bulk movement of hot air'],1,'Electromagnetic radiation can travel through a vacuum. Conduction and convection require matter.'),
-mc('he3','core','Why can warmer air rise above a heater?',['It expands and is usually less dense than surrounding cooler air.','Its particles become lighter elements.','Heat is a substance that always moves upward.','All gases rise regardless of density.'],0,'At approximately constant pressure, warmer air expands and becomes less dense. Buoyancy drives upward flow while cooler air can move down.'),
-mc('he4','extension','An ice cube is placed on a metal tray initially at room temperature. Which statement describes net energy transfer?',['Cold flows from ice into metal.','No energy moves because both are solids.','Energy moves only from the lower-mass object.','Energy transfers from the warmer tray to the colder ice.'],3,'Net thermal energy transfer is from higher to lower temperature. The ice can melt as it gains energy; cold is not a substance flowing out.'),
-written('he5','core','Explain conduction from a warm metal tray into an ice cube touching it. Describe transfer direction and what happens to the ice.',['Net energy transfers from the warmer metal toward the colder ice.','Interactions at contact transfer energy; mobile electrons also help conduct energy through the metal.','The ice gains energy that can melt it; cold is not transferred as a substance.'],'Thermal energy is conducted through the metal and across its contact with the ice, from the warmer tray toward the colder ice. This energy can melt the ice. It is not a flow of a substance called cold.'),
-written('he6','extension','A hot-air balloon rises after its burner heats the enclosed air. Explain the density change and buoyancy, and distinguish this from radiation felt near the burner.',['Heating increases average particle kinetic energy.','The air expands or some escapes through the opening, lowering the density of air inside relative to outside.','Buoyant force can exceed the total weight of balloon, payload and enclosed air, causing upward acceleration.','Radiation from the burner transfers energy by electromagnetic waves; the rising air involves bulk fluid movement.'],'Heating increases air-particle kinetic energy. At approximately atmospheric pressure, the air expands and some leaves the open balloon, lowering internal density. If upthrust exceeds total weight, the balloon rises. Radiation near the flame is electromagnetic energy transfer, different from movement of the heated air.')
-]}
-]};if(typeof module!=='undefined')module.exports=bank;else root.ExamBank=bank;
-})(globalThis);
+/* Practice aligned to the supplied 2026 Genetics and Term 4 objectives. */
+(function(root){const bank={
+  "version": 1,
+  "topics": [
+    {
+      "id": "evolution",
+      "title": "Evolution",
+      "link": "moreLabs",
+      "source": "Adapted from 2020 natural-selection quiz; 2024 CORE Q8–11; 2025 CORE Q9–11 and evolution draft; 2025 EXT bottleneck question. Original tree and scenarios. A-level classification material used only for general evidence skills.",
+      "questions": [
+        {
+          "id": "ev1",
+          "type": "mc",
+          "level": "core",
+          "prompt": "After an environment changes, an inherited trait becomes more common over generations. Which explanation is consistent with natural selection?",
+          "options": [
+            "Individuals deliberately change their genes to cope.",
+            "All individuals develop the trait because they need it.",
+            "The environment creates only helpful mutations.",
+            "Individuals already carrying an advantageous trait leave more surviving offspring."
+          ],
+          "correct": 3,
+          "explain": "Selection acts on existing heritable variation through differences in reproductive success. New mutations are not directed by an organism’s needs.",
+          "marks": 1
+        },
+        {
+          "id": "ev2",
+          "type": "mc",
+          "level": "core",
+          "prompt": "In the tree shown, which living species is most closely related to A?",
+          "options": [
+            "B",
+            "C",
+            "D",
+            "All are equally closely related."
+          ],
+          "correct": 0,
+          "explain": "A and B share the most recent common ancestor. Relatedness follows branching history, not how near labels happen to be on a page.",
+          "stimulus": "tree",
+          "marks": 1
+        },
+        {
+          "id": "ev3",
+          "type": "mc",
+          "level": "core",
+          "prompt": "A chance storm kills most beetles on an island irrespective of colour. Survivors happen to be mostly green. Which process best explains the immediate allele-frequency change?",
+          "options": [
+            "Artificial selection",
+            "A genetic bottleneck involving drift",
+            "A new mutation in every survivor",
+            "Natural selection favouring green camouflage"
+          ],
+          "correct": 1,
+          "explain": "The stated survival is by chance, not colour advantage. A small surviving sample can have different allele frequencies: a bottleneck causes genetic drift.",
+          "marks": 1
+        },
+        {
+          "id": "ev4",
+          "type": "mc",
+          "level": "extension",
+          "prompt": "Which observation provides the strongest evidence that two geographically separated, sexually reproducing populations have become different species under the biological species concept?",
+          "options": [
+            "They occupy different islands.",
+            "Their average sizes differ slightly.",
+            "They can no longer interbreed to produce viable, fertile offspring.",
+            "They have different population sizes."
+          ],
+          "correct": 2,
+          "explain": "Geographical separation can reduce gene flow, but reproductive isolation is the key criterion here. This species concept has limits, such as for fossils and asexual organisms.",
+          "marks": 1
+        },
+        {
+          "id": "ev5",
+          "type": "written",
+          "level": "core",
+          "prompt": "A bacterial population includes a few cells with inherited antibiotic resistance before treatment. After repeated treatment, resistance is common. Explain the change using natural selection.",
+          "rubric": [
+            "Heritable variation existed before treatment: some bacteria were resistant.",
+            "The antibiotic inhibited or killed susceptible bacteria more than resistant bacteria.",
+            "Resistant survivors reproduced and passed on resistance, increasing its frequency over generations."
+          ],
+          "model": "Some bacteria were already resistant. Treatment acted as a selection pressure, leaving resistant bacteria with greater survival and reproductive success. Their descendants inherited resistance, so the proportion of resistant bacteria increased. The antibiotic did not give bacteria the mutations they needed.",
+          "marks": 3
+        },
+        {
+          "id": "ev6",
+          "type": "written",
+          "level": "extension",
+          "prompt": "A river divides a population of small mammals. Food differs on each side. Explain how this could eventually result in allopatric speciation; do not assume separation alone immediately makes new species.",
+          "rubric": [
+            "The barrier reduces or prevents gene flow between the populations.",
+            "Inherited variation exists; mutation can supply new alleles, and drift may also alter frequencies.",
+            "Different selection pressures lead to different reproductive success and diverging allele frequencies over generations.",
+            "Reproductive isolation eventually develops so members cannot interbreed to produce viable, fertile offspring even if they meet."
+          ],
+          "model": "Isolation limits gene flow. The populations contain heritable variation, with mutation adding new alleles. Different foods favour different traits, and selection and drift can lead to divergence over many generations. If reproductive isolation develops, they become separate species under the biological species concept.",
+          "marks": 4
+        }
+      ]
+    },
+    {
+      "id": "genetics",
+      "title": "Genetics & cell division",
+      "link": "studio",
+      "source": "Adapted from Genetics exam DRAFT 2025; 2025 CORE genetics; 2025 EXT Q6–7; 2024 CORE/EXT genetics. New scenarios and numbers; complements the original genetics checks.",
+      "questions": [
+        {
+          "id": "ge1",
+          "type": "mc",
+          "level": "core",
+          "prompt": "A diploid cell has 12 chromosomes. Immediately after DNA replication, before mitosis, how many chromosomes does it have?",
+          "options": [
+            "6",
+            "12",
+            "24",
+            "48"
+          ],
+          "correct": 1,
+          "explain": "DNA replication makes sister chromatids, but chromosome number counted by centromeres remains 12 until chromatids separate.",
+          "marks": 1
+        },
+        {
+          "id": "ge2",
+          "type": "number",
+          "level": "core",
+          "prompt": "For a monohybrid cross Aa × Aa, what percentage of offspring is expected to have genotype aa?",
+          "answer": 25,
+          "unit": "%",
+          "tolerance": 0.01,
+          "explain": "The four equally likely combinations are AA, Aa, Aa and aa, giving 1/4 = 25%. This is a probability for each offspring, not a required family ratio.",
+          "marks": 1
+        },
+        {
+          "id": "ge3",
+          "type": "mc",
+          "level": "core",
+          "prompt": "Which is the usual outcome of meiosis from a diploid starting cell?",
+          "options": [
+            "Two genetically identical diploid products",
+            "Four diploid products",
+            "Four haploid products with genetic variation",
+            "One cell with twice as many chromosomes"
+          ],
+          "correct": 2,
+          "explain": "Meiosis involves two divisions after one DNA replication and produces haploid products. Crossing over and independent assortment contribute to variation.",
+          "marks": 1
+        },
+        {
+          "id": "ge4",
+          "type": "mc",
+          "level": "extension",
+          "prompt": "In a simple X-linked recessive model, a carrier mother XᴬXᵃ and unaffected father XᴬY have a son. What is the probability that this son is affected?",
+          "options": [
+            "50%",
+            "25%",
+            "0%",
+            "100%"
+          ],
+          "correct": 0,
+          "explain": "Conditional on the child being a son, he receives Y from his father and has a 1/2 chance of receiving Xᵃ from his mother. The probability among all children is a different question.",
+          "marks": 1
+        },
+        {
+          "id": "ge5",
+          "type": "written",
+          "level": "core",
+          "prompt": "Compare mitosis and meiosis in division number, chromosome number of products and biological purpose.",
+          "rubric": [
+            "Mitosis has one division; meiosis has two after one DNA replication.",
+            "Mitosis preserves chromosome number; meiosis halves it to form haploid products.",
+            "Mitosis supports growth/repair (and asexual reproduction); meiosis supports sexual reproduction by producing haploid cells."
+          ],
+          "model": "Mitosis divides once and preserves chromosome number, usually yielding two genetically similar cells for growth and repair. Meiosis divides twice and halves chromosome number, producing haploid cells used in sexual reproduction.",
+          "marks": 3
+        },
+        {
+          "id": "ge6",
+          "type": "written",
+          "level": "extension",
+          "prompt": "A homologous pair carries AB on one homologue and ab on the other. Explain how one crossover between the two gene locations can produce Ab and aB chromatids. Distinguish new allele combinations from new alleles.",
+          "rubric": [
+            "Homologous chromosomes pair in prophase I of meiosis.",
+            "Corresponding DNA segments are exchanged between two non-sister chromatids.",
+            "The selected chromatids become Ab and aB; uninvolved chromatids can retain AB and ab.",
+            "This recombines existing alleles; it does not itself require a new allele to be created by mutation."
+          ],
+          "model": "During prophase I, homologues pair and two non-sister chromatids exchange corresponding segments. A crossover between the loci can create Ab and aB while the other chromatids retain AB and ab. The allele combinations are new, but the alleles themselves already existed.",
+          "marks": 4
+        }
+      ]
+    },
+    {
+      "id": "rates",
+      "title": "Reaction rates",
+      "link": "visualLabs",
+      "source": "Adapted from 2024 CORE chemistry graph; 2025 CORE Q12–13; 2025 EXT chemistry; NEAP glow-stick investigation. Original dataset.",
+      "questions": [
+        {
+          "id": "ra1",
+          "type": "mc",
+          "level": "core",
+          "prompt": "Equal masses of calcium carbonate react with excess acid at the same temperature. Why does powder usually react faster than one large lump?",
+          "options": [
+            "Powder has more exposed surface area for collisions.",
+            "Powder contains more calcium carbonate by mass.",
+            "Powder changes the acid into a catalyst.",
+            "The lump has no particles."
+          ],
+          "correct": 0,
+          "explain": "Smaller pieces expose more surface per unit mass, increasing contact and collision opportunities. Equal mass does not mean equal surface area.",
+          "marks": 1
+        },
+        {
+          "id": "ra2",
+          "type": "number",
+          "level": "core",
+          "prompt": "Using the gas-volume data, calculate the mean production rate from 0 to 10 s.",
+          "answer": 2,
+          "unit": "cm³/s",
+          "tolerance": 0.01,
+          "explain": "Mean rate = change in volume/change in time = (20 − 0)/(10 − 0) = 2 cm³/s.",
+          "stimulus": "rateTable",
+          "marks": 1
+        },
+        {
+          "id": "ra3",
+          "type": "mc",
+          "level": "core",
+          "prompt": "Why does increasing temperature usually speed up a reaction?",
+          "options": [
+            "It creates extra reactant atoms.",
+            "It always increases the final product amount.",
+            "Every collision becomes successful.",
+            "A greater fraction of collisions has enough energy to overcome the activation barrier."
+          ],
+          "correct": 3,
+          "explain": "Higher temperature raises average kinetic energy. More collisions meet the energy requirement (and collisions may be more frequent), but not every collision succeeds.",
+          "marks": 1
+        },
+        {
+          "id": "ra4",
+          "type": "mc",
+          "level": "extension",
+          "prompt": "A catalyst speeds up a reaction primarily by:",
+          "options": [
+            "Increasing the activation energy.",
+            "Providing an alternative pathway with lower activation energy.",
+            "Being permanently used up as the main reactant.",
+            "Guaranteeing a greater final equilibrium yield."
+          ],
+          "correct": 1,
+          "explain": "A catalyst lowers the activation barrier for an alternative pathway and is regenerated overall. It changes rate, not the equilibrium composition at fixed conditions.",
+          "marks": 1
+        },
+        {
+          "id": "ra5",
+          "type": "written",
+          "level": "core",
+          "prompt": "The gas volume increases quickly at first, then more slowly, and finally stops increasing. Explain each stage using reacting particles.",
+          "rubric": [
+            "Initially reactants are readily available, so successful collisions are relatively frequent.",
+            "As reactants are consumed, fewer suitable collisions occur per second and the rate slows.",
+            "A plateau can occur when a limiting reactant is used up, so no further gas is produced under these conditions."
+          ],
+          "model": "The initial high reactant availability gives a high collision rate. As reactants are consumed, successful collisions become less frequent and the curve becomes less steep. When the limiting reactant is exhausted, the product volume plateaus.",
+          "stimulus": "rateTable",
+          "marks": 3
+        },
+        {
+          "id": "ra6",
+          "type": "written",
+          "level": "extension",
+          "prompt": "Design a fair comparison of the effect of temperature on magnesium reacting with hydrochloric acid. State what to vary, what to measure, two controls and how to improve reliability.",
+          "rubric": [
+            "Vary temperature systematically while keeping other chosen conditions constant.",
+            "Measure a suitable rate indicator, such as hydrogen volume at fixed intervals or time to a specified gas volume.",
+            "Control two relevant variables, such as acid volume/concentration and magnesium mass/surface area.",
+            "Repeat each temperature, compare means and identify inconsistent results; use consistent apparatus and a safe teacher-approved method."
+          ],
+          "model": "Use several controlled temperatures and record hydrogen volume at regular intervals. Keep acid volume and concentration and magnesium mass/surface condition fixed. Repeat each temperature and compare mean rates, using the same apparatus and a teacher-approved procedure. A single faster trial is weaker evidence than repeatable results.",
+          "marks": 4
+        }
+      ]
+    },
+    {
+      "id": "heat",
+      "title": "Heat transfer",
+      "link": "visualLabs",
+      "source": "Adapted skills from 2025 CORE Q14; 2025 EXT physics; 2024 CORE hot-air-balloon context; earlier Stile conduction/convection/radiation lessons.",
+      "questions": [
+        {
+          "id": "he1",
+          "type": "mc",
+          "level": "core",
+          "prompt": "The handle of a metal spoon warms while its other end sits in hot water. The main transfer along the spoon is:",
+          "options": [
+            "Convection",
+            "Evaporation",
+            "Conduction",
+            "Nuclear radiation"
+          ],
+          "correct": 2,
+          "explain": "Energy transfers within the solid by interactions among particles and, in metals, mobile electrons. The solid does not circulate as a fluid.",
+          "marks": 1
+        },
+        {
+          "id": "he2",
+          "type": "mc",
+          "level": "core",
+          "prompt": "Which mechanism transfers energy from the Sun through the vacuum of space?",
+          "options": [
+            "Conduction",
+            "Radiation",
+            "Convection",
+            "Bulk movement of hot air"
+          ],
+          "correct": 1,
+          "explain": "Electromagnetic radiation can travel through a vacuum. Conduction and convection require matter.",
+          "marks": 1
+        },
+        {
+          "id": "he3",
+          "type": "mc",
+          "level": "core",
+          "prompt": "Why can warmer air rise above a heater?",
+          "options": [
+            "It expands and is usually less dense than surrounding cooler air.",
+            "Its particles become lighter elements.",
+            "Heat is a substance that always moves upward.",
+            "All gases rise regardless of density."
+          ],
+          "correct": 0,
+          "explain": "At approximately constant pressure, warmer air expands and becomes less dense. Buoyancy drives upward flow while cooler air can move down.",
+          "marks": 1
+        },
+        {
+          "id": "he4",
+          "type": "mc",
+          "level": "extension",
+          "prompt": "An ice cube is placed on a metal tray initially at room temperature. Which statement describes net energy transfer?",
+          "options": [
+            "Cold flows from ice into metal.",
+            "No energy moves because both are solids.",
+            "Energy moves only from the lower-mass object.",
+            "Energy transfers from the warmer tray to the colder ice."
+          ],
+          "correct": 3,
+          "explain": "Net thermal energy transfer is from higher to lower temperature. The ice can melt as it gains energy; cold is not a substance flowing out.",
+          "marks": 1
+        },
+        {
+          "id": "he5",
+          "type": "written",
+          "level": "core",
+          "prompt": "Explain conduction from a warm metal tray into an ice cube touching it. Describe transfer direction and what happens to the ice.",
+          "rubric": [
+            "Net energy transfers from the warmer metal toward the colder ice.",
+            "Interactions at contact transfer energy; mobile electrons also help conduct energy through the metal.",
+            "The ice gains energy that can melt it; cold is not transferred as a substance."
+          ],
+          "model": "Thermal energy is conducted through the metal and across its contact with the ice, from the warmer tray toward the colder ice. This energy can melt the ice. It is not a flow of a substance called cold.",
+          "marks": 3
+        },
+        {
+          "id": "he7",
+          "type": "written",
+          "level": "extension",
+          "prompt": "Explain how a convection current forms when water is heated from below. Compare this with energy transfer by conduction and radiation.",
+          "rubric": [
+            "Water near the heater gains energy and usually expands, becoming less dense.",
+            "Warmer water rises while cooler, denser water sinks, creating circulation.",
+            "Convection transfers energy through bulk fluid movement; conduction transfers energy through interactions without bulk movement.",
+            "Radiation transfers energy by electromagnetic waves and does not require matter."
+          ],
+          "model": "Water heated from below expands and becomes less dense. It rises as cooler, denser water sinks, setting up a convection current. This bulk movement carries thermal energy. Conduction transfers energy through particle interactions without bulk flow, while radiation uses electromagnetic waves and can travel through a vacuum.",
+          "marks": 4
+        }
+      ]
+    }
+  ]
+};if(typeof module!=='undefined')module.exports=bank;else root.ExamBank=bank;})(globalThis);

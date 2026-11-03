@@ -1,3 +1,15 @@
+# Current scope and design — 4 November 2026
+
+The supplied 2026 Genetics Objectives (two pages) and 2026 Term 4 Course Objectives (one populated page plus blank page) are the controlling learning scope. Bold extension distinctions were checked visually. Only genetics, evolution, rates and heat remain. Earlier broad curriculum references below are historical development notes, not additional current learning topics.
+
+The heat extension question was replaced with convection/conduction/radiation reasoning to remove force/acceleration assessment. Existing retained mock question selections are stable; removed answers are excluded on restore. Core and extension practice papers are now 8 questions, 16/20 marks and 30/40 minutes respectively.
+
+Brand reference: staff intranet Brand Guidelines and Logos, linked Brand Identity Staff Guidelines.pdf, pages 19–22: #002D72 blue, #CC8A00 ochre, #797D82 secondary grey; Zilla Slab headings and Maven Pro body. Layout reference: supplied Year 8 Science - Cells - Lesson 02 - Living or Non-Living.pptx (navy/gold panels, serif headings, clean white teaching space). The website uses the guide’s exact primary colours rather than the deck’s approximate palette. Reference documents are not redistributed.
+
+New original models: a qualitative particle-factor animation (not a measured collision/reaction simulation), complementary base-pairing activity, and generation playback of the existing one-locus selection model. All provide explicit limitations. Font delivery uses Google Fonts with local fallbacks. New heat exhibit is CSS artwork, not a modification of a school logo.
+
+## Historical development references
+
 # Resource notes — reviewed 29 October 2026
 
 ## Inspection scope
