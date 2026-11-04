@@ -102,3 +102,11 @@ Scientific cross-checks: [MedlinePlus inheritance patterns](https://www.medlinep
 ## Expanded mocks, dashboard and annotated answers
 
 Four original 20-question practice forms build on the objective workshop and new parallel-form questions, including original anaphase, pedigree, phylogeny and reaction-data stimuli. Twelve original weak/strong response comparisons explain the marking points. The forms collectively sample the 40 derived objective checkpoints; they do not reproduce or claim to predict the school examination. Core/extension coverage follows the supplied objectives; extension forms also assess core foundations. No new third-party content or source documents were uploaded in this revision.
+
+## Guided YouTube viewing — 4 November 2026
+
+All 58 retained links now include objective IDs, a focused viewing prompt, one newly written multiple-choice check with explanatory feedback, and clickable start times. Jump points were checked against each video's visible YouTube chapter markers or exported timestamped captions. Captions were used for timing and content review, not republished. Where captions were unavailable, visible chapter markers supplied the jump points. These are suggested starts, not an automatic stop or an endorsement of every statement in a full video.
+
+Mappings and original checks are in `dist/video-guides.js`. Core/extension labels derive from the existing objective bank. Important qualifications cover DNA replication before mitosis, complex baldness and freckles inheritance, cancer mutation counts, and out-of-scope Earth-science/geological material. Electricity, Newton's laws and Earth/space remain excluded from the topic bank. Full external videos may still include material beyond the selected objective; focus notes direct students to the relevant parts.
+
+Video checks are visit-only rehearsal, separate from tracked objective assessment. The site does not infer viewing completion or mastery from opening a link.

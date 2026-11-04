@@ -40,3 +40,7 @@ Review [AUDIT.md](AUDIT.md) for objective mapping, validation, known limits and 
 Start at `#studentDashboard` or choose a topic on the living workbench. Four 20-question mock forms span the 40 checkpoints across the set; their immutable form IDs preserve attempts across reloads. Existing eight-question results remain supported. Twelve annotated examples explain strong and weak responses. The dashboard combines existing records and can back up/restore them together. Focused topic routes use `#topic-genetics-learn` (and evolution/rates/heat with explore/watch/practice/answers); `#objective-G22` opens a specific checkpoint.
 
 `mock-bank.js` stores original expanded-paper questions and stimuli; `answer-bank.js` stores worked examples; `dashboard-core.js` aggregates evidence; `student-nav.js` manages focused views. No server or student account is required.
+
+### Guided viewing
+
+Watch & learn includes 58 video guides with objective buttons, timestamp jump links, focus prompts and quick checks with feedback. Video checks are temporary rehearsal; objective practice remains the source of saved learning progress. Timing review and source limitations are documented in `SOURCES.md`. Run `node --test tests/*.test.cjs` to validate the full resource, including video coverage.

@@ -72,3 +72,12 @@ IDs are site checkpoints derived from the supplied objectives, not official curr
 | R01 | core | Kinetic and collision theories | rates | 2025 CORE MC26 and short answer Q13 |
 | R02 | core | Rate factors and graph reasoning | rates | 2025 CORE MC24–26, Q12–13; EXT Q10 graph reasoning only |
 | R03 | extension | Enzymes and activation energy | enzyme | 2025 EXT Q9; 2026 Term 4 extension enzymes |
+
+## Guided video update — 4 November 2026
+
+- Reviewed all 58 linked YouTube resources using visible chapter markers and available timestamped captions.
+- Added linked objective tags, extension distinctions, focus prompts, timestamp jump links and a short check with feedback to every video.
+- Added explicit qualification notes for misleading simplifications and out-of-scope sections.
+- Preserved all existing links, topic navigation and assessment progress; no new persistent storage keys.
+- Validated guidance coverage and objective references, question validity, dependency order and exclusions. Existing 13 test groups remain passing; 2 new video test groups pass.
+- Browser checks: incorrect/correct feedback, objective link to G26, generated timestamp URLs, desktop cards, and 390px mobile layout without horizontal overflow.
