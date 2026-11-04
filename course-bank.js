@@ -1,4 +1,3 @@
-/* Original objective practice informed by supplied objectives, exams and Stile extracts. */
 (function(root){const data=[
   {
     "id": "G01",
@@ -901,10 +900,10 @@
     ],
     "correct": 1,
     "feedback": "B and C meet at the more recent branching node. Rotating their tips does not change this relationship.",
-    "task": "Explain which species is closest to A and identify its more distant shared ancestors.",
+    "task": "Using the tree above, explain why B and C are closest relatives and what their relationship to A shows.",
     "rubric": [
-      "Use the most recent common ancestor to identify B.",
-      "Explain that A/B share an older ancestor with C and an older one with D.",
+      "Identify B and C as sharing the most recent common ancestor.",
+      "Explain that the B/C lineage shares an older common ancestor with A; rotating tips does not change these relationships.",
       "Avoid inferring exact time or DNA difference from unscaled branch lengths."
     ],
     "source": "2025 CORE MC22–23 and short answer Q10–11",
@@ -920,7 +919,8 @@
         "feedback": "Common-ancestor relationships follow branching nodes. An unscaled tree does not provide exact DNA similarity or dates.",
         "source": "Stile Evolution 2024 pp26–27"
       }
-    ]
+    ],
+    "revision": 2
   },
   {
     "id": "H01",

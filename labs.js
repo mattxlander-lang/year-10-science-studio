@@ -34,4 +34,4 @@ if(heat==='radiation'){c=`<circle cx="75" cy="150" r="40" fill="#CC8A00"/><circl
 Q('#labCanvas').innerHTML=svg(c,heat+' model. '+desc);Q('#labStage').textContent=heat[0].toUpperCase()+heat.slice(1);Q('#labExplain').textContent=desc;Q('#labCaption').textContent='Motion is greatly slowed and simplified. Heat is energy transferred because of a temperature difference; it is not a substance carried by the coloured dots.';}
 function draw(){if(lab==='cross')cross();if(lab==='dna')dna();if(lab==='rates')rates();if(lab==='heat')heatDraw();if(Q('#labBack')){Q('#labBack').disabled=step===0;Q('#labNext').disabled=step===(lab==='cross'?2:3)}}
 window.addEventListener('science-model-topic',e=>{if(['rates','heat'].includes(e.detail)){lab=e.detail;render();root.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}});root.querySelectorAll('[data-lab]').forEach(b=>b.onclick=()=>{lab=b.dataset.lab;render()});document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});render();
-})();
+window.addEventListener('science-view-changed',pause);})();
