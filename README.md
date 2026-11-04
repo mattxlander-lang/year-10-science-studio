@@ -33,3 +33,10 @@ Run `node --test tests/*.test.cjs` for grading, paper generation, saved-result f
 The workshop now covers 40 derived objectives (30 core, 10 extension), with 54 auto checks, 40 written/drawing prompts, visual activities and browser-local progress export/restore. New diagrams include pedigrees, X-linked inheritance, codominance, eight-stage meiosis, speciation, phylogeny, drift/gene flow, organelles, cell cycle, protein production, mutation/cancer, karyotypes, fertilisation, enzymes and investigation planning. Existing detailed models remain linked.
 
 Review [AUDIT.md](AUDIT.md) for objective mapping, validation, known limits and prioritised student-experience improvements. Run `node --test tests/*.test.cjs`. No source PDFs, exams, login details or student records are included.
+
+
+### Focused student experience
+
+Start at `#studentDashboard` or choose a topic on the living workbench. Four 20-question mock forms span the 40 checkpoints across the set; their immutable form IDs preserve attempts across reloads. Existing eight-question results remain supported. Twelve annotated examples explain strong and weak responses. The dashboard combines existing records and can back up/restore them together. Focused topic routes use `#topic-genetics-learn` (and evolution/rates/heat with explore/watch/practice/answers); `#objective-G22` opens a specific checkpoint.
+
+`mock-bank.js` stores original expanded-paper questions and stimuli; `answer-bank.js` stores worked examples; `dashboard-core.js` aggregates evidence; `student-nav.js` manages focused views. No server or student account is required.

@@ -1,44 +1,30 @@
-# Student resource audit — 4 November 2026
+# Student resource audit — implemented improvements, 4 November 2026
 
-## Outcome
+## What is now implemented
 
-The supplied 2026 objectives are mapped to 40 checkpoints: 30 core and 10 extension. Each checkpoint has an explanation, an interactive diagram or a link to the appropriate existing model, automatically checked practice with feedback, and a written/drawing task with a three-point self-check guide. There are 54 workshop auto questions and 40 written/drawing prompts, in addition to the existing 24-question exam bank. Detailed meiosis now has eight named stages. The assessed physics investigation is supported by planning practice, not represented as completed assessment.
+- **Broader assessment:** four fixed forms (Core A/B and Extension A/B), each with 20 questions: 16 auto checks and four written responses, 28 marks. Core practice time is 45 minutes; extension is 55, with optional 25% or 50% extra time. Both Core forms together sample all 30 core checkpoints; all four forms together sample all 40 checkpoints. A/B forms vary content and objective sampling; they are practice forms, not psychometrically calibrated equivalents.
+- **Explicit coverage:** each submitted paper identifies sampled and unsampled objectives, missed marks and writing awaiting self-assessment. Missed items link directly into the matching objective. The older eight-question attempts remain readable with their original totals and deadlines.
+- **One dashboard:** existing objective checks, topic-quiz results, cell-division checks, mock results and linked revision-plan check-offs feed one student overview. Next actions prioritise an active mock, pending written marking, then a missed objective. A checked workshop objective completed after the latest mock is identified as revised since that attempt. Different evidence types remain labelled; the dashboard does not invent a course mastery percentage.
+- **Unified backup:** export/restore objectives, quizzes, mocks, plans and cell-division records as one local JSON file. Restore validates records, requires an explicit in-page replacement action, blocks replacement during an active mock, and preserves absolute deadlines. Records are browser-local and do not automatically sync.
+- **Annotated responses:** 12 original worked examples compare weak and stronger answers, with an explanation for each of three marking points. They appear in focused topic views, relevant workshop entries and expanded mock marking guides. Answers stay hidden during an active mock.
+- **Focused navigation:** the living workbench opens four topic views. Each has Learn & check, Visual models, Watch, Exam practice and Worked answers. Only the selected activity is shown; dashboard, mocks and revision plan have direct navigation. Existing section links and browser back/forward remain supported. Animations pause when their view is left.
+- **Audit corrections:** fixed a navigation event that accidentally treated the page body as a topic button; improved dark-panel heading contrast; corrected the phylogeny written task and marking guide to match the A/(B,C) diagram. Only that objective's outdated written check-offs are invalidated, preserving its draft and other progress.
 
-## Changes made during the audit
+## Validation
 
-- Corrected a tree-question/diagram mismatch; rotating tree tips now preserves the tested relationship.
-- Distinguished affected-son probability among all offspring from risk conditional on being a son; tested all parental combinations.
-- Preserved uncertainty in pedigree genotypes and stated the assumptions behind simple inheritance models.
-- Explained that geographic isolation does not automatically create a species; labelled both populations as species only at the reproductive-isolation stage.
-- Added eight-stage meiosis and clarified the absence of another S phase between divisions.
-- Put the objective workshop directly after the workbench, linked it from topic drawers and mock-based revision plans, and made objective changes scroll to their heading.
-- Kept core/extension filtering, existing progress records and the four-topic scope; no electricity, Newton's laws or Earth/space content was restored.
-- Added objective progress export/restore, input validation, keyboard-friendly controls, text equivalents for diagrams and reduced-motion handling.
-- Retained all 51 original video links; added seven non-duplicate, objective-related links listed on the school Firefly hub. Counts are calculated from the bank.
+Thirteen automated test groups pass, including legacy grading/timers/plans, all four new form blueprints and objective coverage, reload-stable question sets/deadlines, pending written evidence, dashboard aggregation and revision timing, and annotation structure. All scripts compile. Browser QA covered topic switching, hidden view isolation, worked-answer expansion, new-mock start/resume/reload/submit, partial self-marking, objective coverage, live dashboard updates, and an actual export/restore round trip. Dashboard and expanded annotations were checked at 390 × 844 with no horizontal overflow. Existing and new mock records were both restored. This is functional QA, not formal accessibility certification or a study of learning outcomes.
 
-## Verification
+## Remaining worthwhile improvements
 
-Eight automated test groups passed: objective-bank integrity, inheritance probabilities, codominance, progress validation, existing exam grading/retries, timed-mock deadlines/results, population-selection behaviour and revision-plan priorities. Every objective panel was opened in the local browser. Browser checks covered X-linked parent changes, pedigree genotype reveal, meiosis stages, speciation, saved completion after reload and routes to DNA, collision theory and mitosis. A 390 × 844 viewport had no horizontal document overflow in the checked workshop state. Desktop and phone screenshots were inspected. This is practical QA, not a formal accessibility certification or a study of student learning outcomes.
+1. Teacher moderation and student trials: review difficulty and marking consistency, then observe several students completing the full journey.
+2. Larger unseen question pool: these four forms broaden coverage, but repeated fixed questions can still reward recall. Add further diagram, graph and experimental-design variants after classroom feedback.
+3. Video timestamps and prompts: add objective-specific viewing ranges, durations and a short retrieval question for each selected clip.
+4. Accessibility testing: test keyboard-only use and screen-reader output with students, particularly the diagrams and timed assessment interface.
+5. Optional accounts/sync only if needed: the current backup approach avoids student accounts; a future sync feature would require a separate privacy and school-data design decision.
 
-## Highest-value next improvements
+## Resource and assessment limits
 
-| Priority | Area | Recommendation | Why it matters / acceptance criterion |
-|---|---|---|---|
-| 1 | Assessment content | Build several equivalent question variants per objective, including unseen diagrams and data interpretation. Expand mock blueprints beyond the current eight questions. | Students should transfer understanding, not memorise one answer. Each mock should report which objectives it did and did not sample. |
-| 2 | Structure and functionality | Unify objective, topic-quiz and mock progress into a single student dashboard, with objective-specific links from every missed question. | The current records serve different purposes and remain separate; students should see one clear next action without interpreting several counters. |
-| 3 | Feedback quality | Add annotated examples of weak, adequate and strong written responses, with teacher-calibrated marking points. | Self-check boxes record student judgement. Examples should show exactly how an explanation earns each point and why a misconception loses credit. |
-| 4 | Look, feel and accessibility | Reduce remaining long-page repetition by providing one focused topic view; test with keyboard-only users, screen readers and actual student phones. | Keep the CGS blue/gold identity and meaningful animations, while reducing navigation effort. Validate tasks with students, not aesthetics alone. |
-| 5 | Video/resource quality | Add verified video timestamps, duration, objective tags and one retrieval question per selected clip. | The current links are useful but some videos include material beyond these objectives. Title metadata is not a full pedagogical review. |
-| 6 | Retention and resilience | Add a mixed, low-stakes retrieval mode using alternate questions and an optional unified offline progress backup. | Repeated success on the same item is weak mastery evidence. Browser-local storage can be cleared and does not sync across devices. |
-
-## Limits and teacher review
-
-- The school objectives and supplied exams determine scope; the site does not replace a teacher's assessment or practical instructions.
-- Diagrams are simplified models. The inheritance activities assume single-gene models and specified penetrance; real human traits and sex development can be more complex.
-- Core/extension labels follow the supplied objectives, not a claim that every linked third-party video stays within those limits.
-- The six Stile extracts were reviewed for in-scope concepts; new practice was written rather than distributing private PDFs. Reaction classification, radioactivity, unrelated microscope work and other excluded material were not imported.
-- The Firefly revision page and its resource list were accessible. YouTube titles were checked through metadata. Downloads of its presentation and worksheet did not complete in the browser; their full contents were not independently audited and they remain school-sign-in links. No embedded access tokens or private source papers are published.
-- Before high-stakes classroom use, a subject teacher should moderate the question/marking bank and a small student group should trial the complete revision journey.
+The supplied 2026 objective sheets determine scope. Electricity, Newton's laws and Earth/space remain excluded. The six supplied Stile extracts and 2025 exams informed original practice, rather than republication of source papers. The school Firefly resource listing and video metadata were reviewed; its presentation/worksheet downloads did not complete, so they remain school-sign-in links rather than independently audited imported content. The assessed practical still requires teacher instructions and assessment. Written scores are explicitly self-assessed. Simplified inheritance models state their assumptions; mock scores are not official school grades.
 
 ## Objective coverage map
 

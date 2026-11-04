@@ -97,3 +97,8 @@ Stile extracts reviewed: Genetics RP2025 pp35–40 (printed32–37); Cells RP202
 Firefly: https://accesscgs.fireflycloud.net.au/senior/caulfield-campus/year-10/science/science/revision . Reviewed its resource listing; added clean school worksheet links and seven non-duplicate video links relevant to existing objectives. Video titles/authors were verified through YouTube oEmbed metadata. This is not a claim to have watched every full video. Presentation and worksheet download attempts timed out, so these remain linked resources, not audited imported content.
 
 Scientific cross-checks: [MedlinePlus inheritance patterns](https://www.medlineplus.gov/genetics/understanding/inheritance/inheritancepatterns/) for X-linked transmission and model limitations; [UC Berkeley speciation lecture](https://ib.berkeley.edu/courses/bio1b/evolutionspring11/pdfs/MoritzNotes9.pdf) for geographic isolation and reproductive isolation.
+
+
+## Expanded mocks, dashboard and annotated answers
+
+Four original 20-question practice forms build on the objective workshop and new parallel-form questions, including original anaphase, pedigree, phylogeny and reaction-data stimuli. Twelve original weak/strong response comparisons explain the marking points. The forms collectively sample the 40 derived objective checkpoints; they do not reproduce or claim to predict the school examination. Core/extension coverage follows the supplied objectives; extension forms also assess core foundations. No new third-party content or source documents were uploaded in this revision.
