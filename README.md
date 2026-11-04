@@ -43,4 +43,4 @@ Start at `#studentDashboard` or choose a topic on the living workbench. Four 20-
 
 ### Guided viewing
 
-Watch & learn includes 58 video guides with objective buttons, timestamp jump links, focus prompts and quick checks with feedback. Video checks are temporary rehearsal; objective practice remains the source of saved learning progress. Timing review and source limitations are documented in `SOURCES.md`. Run `node --test tests/*.test.cjs` to validate the full resource, including video coverage.
+Watch & learn includes 58 video guides with objective buttons, timestamp jump links, focus prompts and quick checks with feedback. Video checks save first/latest answers, attempt counts and dates in this browser. The dashboard reports them separately from objective and exam progress and includes them in backup/restore. The revision plan recommends videos for missed mock objectives and incorrect video checks. Timing review and source limitations are documented in `SOURCES.md`. Run `node --test tests/*.test.cjs` to validate the full resource, including video coverage.

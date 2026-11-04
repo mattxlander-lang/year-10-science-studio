@@ -109,4 +109,4 @@ All 58 retained links now include objective IDs, a focused viewing prompt, one n
 
 Mappings and original checks are in `dist/video-guides.js`. Core/extension labels derive from the existing objective bank. Important qualifications cover DNA replication before mitosis, complex baldness and freckles inheritance, cancer mutation counts, and out-of-scope Earth-science/geological material. Electricity, Newton's laws and Earth/space remain excluded from the topic bank. Full external videos may still include material beyond the selected objective; focus notes direct students to the relevant parts.
 
-Video checks are visit-only rehearsal, separate from tracked objective assessment. The site does not infer viewing completion or mastery from opening a link.
+Video checks are saved browser-local rehearsal results, separate from objective assessment. The site does not infer viewing completion or mastery from opening a link. Results participate in the unified dashboard backup. Recommendations use missed marked objectives from the selected mock and incorrect latest video checks; unmarked writing is not treated as a gap.

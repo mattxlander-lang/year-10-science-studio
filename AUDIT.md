@@ -81,3 +81,11 @@ IDs are site checkpoints derived from the supplied objectives, not official curr
 - Preserved all existing links, topic navigation and assessment progress; no new persistent storage keys.
 - Validated guidance coverage and objective references, question validity, dependency order and exclusions. Existing 13 test groups remain passing; 2 new video test groups pass.
 - Browser checks: incorrect/correct feedback, objective link to G26, generated timestamp URLs, desktop cards, and 390px mobile layout without horizontal overflow.
+
+## Saved video checks and recommendations — 4 November 2026
+
+- Added validated, question-versioned browser storage for first/latest video-check answers, attempts and last checked date; stale or malformed records are ignored. Storage failures retain session results with a warning.
+- Added a dashboard summary and topic counts, plus direct links to revisit unsuccessful checks. No video activity alters objective or mock scores.
+- Added up to six recommendations from the selected mock’s marked objective gaps and unsuccessful video checks. Pending writing and unattempted videos are not treated as weaknesses. Legacy mocks without objective evidence use explicitly labelled topic recommendations.
+- Included video records in unified backup/restore; backups made before this addition preserve existing video results.
+- Verified 20 automated test groups; browser-tested persistence after reload, wrong-to-correct retry totals, no-mock recommendations, mock-specific recommendations, exact-video navigation, backup export, new-backup restoration and old-backup compatibility on an isolated local origin.
