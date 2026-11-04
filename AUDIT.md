@@ -89,3 +89,12 @@ IDs are site checkpoints derived from the supplied objectives, not official curr
 - Added up to six recommendations from the selected mock’s marked objective gaps and unsuccessful video checks. Pending writing and unattempted videos are not treated as weaknesses. Legacy mocks without objective evidence use explicitly labelled topic recommendations.
 - Included video records in unified backup/restore; backups made before this addition preserve existing video results.
 - Verified 20 automated test groups; browser-tested persistence after reload, wrong-to-correct retry totals, no-mock recommendations, mock-specific recommendations, exact-video navigation, backup export, new-backup restoration and old-backup compatibility on an isolated local origin.
+
+## Missions release — 5 November 2026
+
+- Added eight missions across all four retained topic areas, eight skill badges and sixteen fresh application/follow-up questions. Extension is clearly labelled.
+- Added three personalised dashboard suggestions, prioritising due follow-ups, marked mock gaps and unsuccessful linked video checks. Scheduled follow-ups do not crowd out actionable suggestions.
+- Mission challenge requires linked objective completion, a correct video check and a saved model reflection. Badge requires both mission questions correct with at least 24 hours between them. Reflection length is explicitly a participation check, not grading.
+- Added saved mission records to unified backup/restore, preserving current mission records when restoring legacy backups. Award state is cleaned against mission version, valid answers and timing.
+- Added gold workbench practice/badge milestones with restrained glow animation; existing motion controls and reduced-motion preferences disable the effect.
+- All 24 automated test groups pass. Browser checks covered prerequisite gating, reflection persistence, initial challenge, scheduled follow-up, backup restoration, delayed follow-up and badge persistence using an isolated time-shifted test backup, dashboard/workbench updates, and 390px layout with no horizontal overflow. No test progress was written to the public site.

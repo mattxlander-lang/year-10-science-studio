@@ -44,3 +44,7 @@ Start at `#studentDashboard` or choose a topic on the living workbench. Four 20-
 ### Guided viewing
 
 Watch & learn includes 58 video guides with objective buttons, timestamp jump links, focus prompts and quick checks with feedback. Video checks save first/latest answers, attempt counts and dates in this browser. The dashboard reports them separately from objective and exam progress and includes them in backup/restore. The revision plan recommends videos for missed mock objectives and incorrect video checks. Timing review and source limitations are documented in `SOURCES.md`. Run `node --test tests/*.test.cjs` to validate the full resource, including video coverage.
+
+### Science missions and skill badges
+
+Eight objective-linked missions combine a saved video check, the objective workshop, a model reflection and two original application questions. The second question unlocks at least 24 hours after the first correct application answer, using the device clock. Badges recognise this limited evidence, not an official grade or whole-topic mastery. Suggested missions prioritise due follow-ups and recorded weak areas; extension is labelled. Browser-local mission records are included in dashboard backup/restore. Older backups without missions preserve current mission records. Workbench gold milestones distinguish guided practice from earned badges and respect the animation toggle and reduced-motion setting.
