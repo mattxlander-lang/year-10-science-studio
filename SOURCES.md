@@ -86,3 +86,14 @@ Original artwork generated with the built-in image-generation tool, then compres
 
 ## Original video library — 4 November 2026
 Source: https://claude.ai/artifact/4XsyKvpQM2eBWmxeb6ESNb . Reviewed all 24 books and transcribed all 51 original YouTube URLs and labels into dist/video-bank.js, retaining extension tags. YouTube metadata was available for 50 links; the remaining meiosis recap (NR9zTvMg-pE) loaded its title and player in the browser. Availability was checked, not full video content. No original videos were present for motion, periodic patterns, chemical reactions or immunology. Electricity and Earth/space remain excluded.
+
+
+## Objective workshop and Stile review — 4 November 2026
+
+Forty derived checkpoints map the two supplied 2026 objective sheets. The workshop adds 54 original auto questions and 40 original written/drawing prompts, informed by the 2025 Core/EXT school exams. See AUDIT.md for the complete coverage table and review limits.
+
+Stile extracts reviewed: Genetics RP2025 pp35–40 (printed32–37); Cells RP2025 pp33–40 (printed30–37); Evolution RP2024 pp27–31 (printed24–28); Evolution RP2026 p33 (printed30); Reaction Types RP2026 pp35–40 (printed32–37); Heat RP2025 pp15–18 (printed12–15). In-scope contributions include organelle functions, complementary strands, Punnett error detection, conditional X-linked probability, inheritance inference, variation/selection, tree reading, speciation, collision theory, controlled comparisons and heat-transfer misconceptions. The one-page 2026 evolution extract reinforces the selection concepts in the earlier test. None of the source PDFs is republished.
+
+Firefly: https://accesscgs.fireflycloud.net.au/senior/caulfield-campus/year-10/science/science/revision . Reviewed its resource listing; added clean school worksheet links and seven non-duplicate video links relevant to existing objectives. Video titles/authors were verified through YouTube oEmbed metadata. This is not a claim to have watched every full video. Presentation and worksheet download attempts timed out, so these remain linked resources, not audited imported content.
+
+Scientific cross-checks: [MedlinePlus inheritance patterns](https://www.medlineplus.gov/genetics/understanding/inheritance/inheritancepatterns/) for X-linked transmission and model limitations; [UC Berkeley speciation lecture](https://ib.berkeley.edu/courses/bio1b/evolutionspring11/pdfs/MoritzNotes9.pdf) for geographic isolation and reproductive isolation.

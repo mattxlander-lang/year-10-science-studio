@@ -1,4 +1,4 @@
-/* Links and labels transcribed from the original shared library, 4 November 2026. */
+/* Original library links plus selected objective-related links listed on the school Firefly revision page. */
 (function(root){const books=[
   {
     "id": "book-1",
@@ -519,6 +519,75 @@
         "url": "https://www.youtube.com/watch?v=5GoZZKcNZiQ",
         "label": "Radiation in depth",
         "kind": "Deep dive"
+      }
+    ]
+  },
+  {
+    "id": "firefly-genetics",
+    "topic": "genetics",
+    "title": "From your school revision hub",
+    "section": "CGS FIREFLY",
+    "extension": false,
+    "videos": [
+      {
+        "id": "40B8jhQpLTQ",
+        "url": "https://www.youtube.com/watch?v=40B8jhQpLTQ",
+        "label": "KARYOTYPE ANALYSIS",
+        "kind": "School revision selection · Lucas Learns"
+      },
+      {
+        "id": "11s5Biyi9q4",
+        "url": "https://www.youtube.com/watch?v=11s5Biyi9q4",
+        "label": "Pedigrees | Classical genetics | High school biology | Khan Academy",
+        "kind": "School revision selection · Khan Academy"
+      }
+    ]
+  },
+  {
+    "id": "firefly-evolution",
+    "topic": "evolution",
+    "title": "From your school revision hub",
+    "section": "CGS FIREFLY",
+    "extension": false,
+    "videos": [
+      {
+        "id": "rlfNvoyijmo",
+        "url": "https://www.youtube.com/watch?v=rlfNvoyijmo",
+        "label": "Speciation",
+        "kind": "School revision selection · Bozeman Science"
+      },
+      {
+        "id": "ztm96J4eXg4",
+        "url": "https://www.youtube.com/watch?v=ztm96J4eXg4",
+        "label": "Understanding Evolution – Allopatric Speciation",
+        "kind": "School revision selection · Zenergy Films"
+      },
+      {
+        "id": "KLMn4XwS8Tw",
+        "url": "https://www.youtube.com/watch?v=KLMn4XwS8Tw",
+        "label": "Phylogeny and the Tree of Life",
+        "kind": "School revision selection · Professor Dave Explains"
+      },
+      {
+        "id": "M7rqXEogkwU",
+        "url": "https://www.youtube.com/watch?v=M7rqXEogkwU",
+        "label": "Phylogenetic Tree Basics",
+        "kind": "School revision selection · Pilar Rodriguez"
+      }
+    ]
+  },
+  {
+    "id": "firefly-rates",
+    "topic": "rates",
+    "title": "From your school revision hub",
+    "section": "CGS FIREFLY",
+    "extension": false,
+    "videos": [
+      {
+        "id": "1Jtw8g795Us",
+        "url": "https://www.youtube.com/watch?v=1Jtw8g795Us",
+        "label": "The Kinetic Molecular Theory (Animation)",
+        "kind": "School revision selection · SammyJ Studios"
       }
     ]
   }

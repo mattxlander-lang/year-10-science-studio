@@ -26,3 +26,10 @@ CGS blue #002D72 and ochre #CC8A00 follow the Brand Identity Staff Guidelines, w
 
 Serve `dist/` with `python3 -m http.server 8765 --directory dist`.
 Run `node --test tests/*.test.cjs` for grading, paper generation, saved-result filtering, revision priorities and selection-model checks. No build step or student accounts are required.
+
+
+### Objective workshop update
+
+The workshop now covers 40 derived objectives (30 core, 10 extension), with 54 auto checks, 40 written/drawing prompts, visual activities and browser-local progress export/restore. New diagrams include pedigrees, X-linked inheritance, codominance, eight-stage meiosis, speciation, phylogeny, drift/gene flow, organelles, cell cycle, protein production, mutation/cancer, karyotypes, fertilisation, enzymes and investigation planning. Existing detailed models remain linked.
+
+Review [AUDIT.md](AUDIT.md) for objective mapping, validation, known limits and prioritised student-experience improvements. Run `node --test tests/*.test.cjs`. No source PDFs, exams, login details or student records are included.
