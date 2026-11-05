@@ -98,3 +98,13 @@ IDs are site checkpoints derived from the supplied objectives, not official curr
 - Added saved mission records to unified backup/restore, preserving current mission records when restoring legacy backups. Award state is cleaned against mission version, valid answers and timing.
 - Added gold workbench practice/badge milestones with restrained glow animation; existing motion controls and reduced-motion preferences disable the effect.
 - All 24 automated test groups pass. Browser checks covered prerequisite gating, reflection persistence, initial challenge, scheduled follow-up, backup restoration, delayed follow-up and badge persistence using an isolated time-shifted test backup, dashboard/workbench updates, and 390px layout with no horizontal overflow. No test progress was written to the public site.
+
+## Cartoon collection and classroom reward — 5 November 2026
+
+- Moved quests into a dedicated second home section below the workbench, retaining dashboard and saved-progress integration without duplicating the bar.
+- Added eight original inline SVG cartoon badge illustrations plus a trophy character; no external image service or student data transfer is involved.
+- Added an accessible earned-badge progress wheel and eight-item completion line. Guided practice alone does not increment the earned count.
+- Trophy animation and print control unlock only when all eight distinct badges are demonstrated, including extension. Replays, confetti and badge motion respect reduced motion and the existing motion toggle.
+- Print handler regenerates eligibility at click time and creates a single A4 chocolate-bar voucher with student/class lines and teacher verification/redemption fields. No automatic redemption tracking is claimed.
+- 28 automated test groups passed. Browser checks verified 0/8 locked state, 8/8 completion via isolated test backup, eight cartoons, second-section placement, 390px layout without overflow and motion-off suppression.
+- Native print-dialog automation stalled in the in-app browser. The actual print handler was additionally executed in an isolated DOM harness: complete collection generated the voucher and an incomplete collection was blocked. Its generated output was visually checked with print media at the 688px A4 printable width; height was 879px within the available page. No physical print or public-site test progress was created.

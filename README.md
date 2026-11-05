@@ -48,3 +48,7 @@ Watch & learn includes 58 video guides with objective buttons, timestamp jump li
 ### Science missions and skill badges
 
 Eight objective-linked missions combine a saved video check, the objective workshop, a model reflection and two original application questions. The second question unlocks at least 24 hours after the first correct application answer, using the device clock. Badges recognise this limited evidence, not an official grade or whole-topic mastery. Suggested missions prioritise due follow-ups and recorded weak areas; extension is labelled. Browser-local mission records are included in dashboard backup/restore. Older backups without missions preserve current mission records. Workbench gold milestones distinguish guided practice from earned badges and respect the animation toggle and reduced-motion setting.
+
+### Cartoon badges and collection reward
+
+The quests bar is the second main home section, directly below the living workbench. Each badge has original animated vector artwork. A progress wheel and eight-item collection line show earned badges and the remaining count. Earning all eight badges, including X-linked extension, unlocks a cartoon trophy celebration and a printable A4 voucher for one chocolate bar. The teacher verifies completion and signs redemption; browser-local progress is not a secure redemption ledger. All animations respect reduced motion and the existing animation toggle.

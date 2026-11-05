@@ -114,3 +114,7 @@ Video checks are saved browser-local rehearsal results, separate from objective 
 ## Science missions — 5 November 2026
 
 Eight missions and sixteen new questions were written against existing objectives G04, G21, G24, G22 (extension), E05, E08, R02 and H01. They reuse the existing objective models, video guides and practice links. No additional private source documents were published. Model reflections and workshop rubrics remain self-assessed; the two mission questions are automatically checked. A device-clock interval of at least 24 hours separates the successful application question from the different follow-up. This is a revision aid, not a secure or independently verified credential.
+
+## Badge artwork and reward — 5 November 2026
+
+Original code-native SVG cartoons illustrate the eight mission skills and a trophy. These are decorative mascots, not scientific diagrams. The classroom reward is a teacher-verified voucher for one chocolate bar after the complete eight-badge collection. The site does not independently verify student identity or redemption.
