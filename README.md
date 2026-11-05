@@ -52,3 +52,9 @@ Eight objective-linked missions combine a saved video check, the objective works
 ### Cartoon badges and collection reward
 
 The quests bar is the second main home section, directly below the living workbench. Each badge has original animated vector artwork. A progress wheel and eight-item collection line show earned badges and the remaining count. Earning all eight badges, including X-linked extension, unlocks a cartoon trophy celebration and a printable A4 voucher for one chocolate bar. The teacher verifies completion and signs redemption; browser-local progress is not a secure redemption ledger. All animations respect reduced motion and the existing animation toggle.
+
+### Combined 72-question practice paper
+
+`#practice72` hosts the audited original combined paper: 52 core + 20 extension questions, 225 marks, linked to all 40 objective checkpoints. Untimed practice gives feedback per question. Multiple choice and explicit numerical fields are automatically checked; written explanations, working and drawings use the worked guide and self-assigned marks. The paper includes enhanced scientific illustrations, model diagrams, Punnett tables and a drawing pad. H02 remains investigation planning support, not a substitute for the assessed practical.
+
+Progress, drafts and strokes save under `science-studio-practice72-v1` in the current browser; the dashboard reports marked points separately from unfinished points and includes this record in backup/restore. Older backups preserve it. No accounts or server grading are used. The new practice bank is public, as appropriate for feedback-based study; original source exams and private audit comparisons are not published.

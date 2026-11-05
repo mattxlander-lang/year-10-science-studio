@@ -118,3 +118,7 @@ Eight missions and sixteen new questions were written against existing objective
 ## Badge artwork and reward — 5 November 2026
 
 Original code-native SVG cartoons illustrate the eight mission skills and a trophy. These are decorative mascots, not scientific diagrams. The classroom reward is a teacher-verified voucher for one chocolate bar after the complete eight-badge collection. The site does not independently verify student identity or redemption.
+
+## Combined practice paper illustrations
+
+The new 72-question practice paper adapts the separately audited practice exam, with original questions informed by the supplied learning objectives, prior papers and Stile revision material. Original source papers are not redistributed. Seven scientific illustrations were generated with ChatGPT ImageGen and checked against chromosome counts, labels and question requirements; remaining diagrams were drawn for this practice resource. Onion-root photograph: Roval312, *Mitosis in onion cells* (2015), https://commons.wikimedia.org/wiki/File:Mitosis_in_onion_cells.jpg, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). The photograph is presented without content edits, converted to WebP for delivery. Attribution and licence appear beside the question.
